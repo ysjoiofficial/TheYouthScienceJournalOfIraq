@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>YSJOI — Contributors</title>
+<link rel="canonical" href="https://ysjoi.is-great.org/contributors.html">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favions.png">
+<style>
+  :root {
+    --bg: #0A0A1A;
+    --panel: #151533;
+    --text: #FFFFFF;
+    --accent-blue: #00FFFF;
+    --accent-purple: #BF00FF;
+    --accent-red: #FF0055;
+    --muted: #d7d7ee;
+    --accent-color: #00FFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    top: 0px !important;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .goog-te-banner-frame.skiptranslate,
+  .goog-te-gadget-icon,
+  iframe.skiptranslate {
+    display: none !important;
+  }
+
+  /* --- HEADER & LOGO --- */
+  header {
+    position: relative;
+    background: url('banner.png') center/cover no-repeat;
+    padding: 70px 20px;
+    text-align: center;
+    box-shadow: inset 0 0 120px #000;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  header h1, header p {
+    position: relative;
+    z-index: 1;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  header h1 {
+    font-size: 3.8rem;
+    color: var(--accent-purple);
+    margin-bottom: 10px;
+  }
+
+  header p { color: #e9e9ff; }
+
+  header .site-logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+    display: block;
+    text-decoration: none;
+  }
+
+  header .site-logo img {
+    display: block;
+    height: 175px;
+    width: auto;
+    object-fit: contain;
+    pointer-events: auto;
+    filter: none;
+  }
+
+  /* --- CONTAINER & CARDS --- */
+  .container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 50px 20px;
+  }
+
+  .section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    display: inline-block;
+    background: linear-gradient(90deg, var(--accent-purple), var(--accent-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-bottom: 60px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    transition: all .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .core {
+    background: linear-gradient(145deg, #1d1d44, #14142d);
+    box-shadow: 0 10px 30px rgba(191, 0, 255, 0.15);
+    border: 2px solid #D4AF37;
+  }
+
+  .core:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(191, 0, 255, 0.35);
+  }
+
+  .questioner {
+    background: linear-gradient(145deg, #132c38, #101a2b);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+  }
+
+  .questioner:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.3);
+  }
+
+  .special {
+    background: linear-gradient(135deg, #2a003f, #001f33);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(191, 0, 255, 0.3);
+  }
+
+  .special:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.5);
+  }
+
+  .avatar {
+    width: 65px;
+    height: 65px;
+    padding: 10px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 22px;
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+    color: #0b0b10;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-blue);
+  }
+
+  .role {
+    font-size: 0.85rem;
+    color: #bfc0e8;
+    margin: 4px 0;
+  }
+
+  .card p {
+    margin: 4px 0;
+    font-size: 0.92rem;
+    color: #d7d7ee;
+  }
+
+  /* --- FOOTER --- */
+  .site-footer {
+    background: #11101A;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+  }
+
+  .footer-column h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-blue);
+  }
+
+  .footer-column a { color: var(--accent-blue); }
+  .footer-column a:hover { color: var(--accent-red); }
+  .footer-bottom { font-size: 0.9rem; opacity: 0.8; }
+
+  /* --- UI ELEMENTS & NAV --- */
+  .back {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: #d7d7ee;
+    margin-bottom: 18px;
+  }
+
+  .language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 8px;
+  }
+
+  .language-switcher button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .language-switcher img {
+    width: 20px;
+    height: 14px;
+  }
+
+  .menu-trigger {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 140px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--accent-color);
+    border-radius: 8px;
+    color: var(--accent-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 100;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu-trigger:hover {
+    background: var(--accent-color);
+    color: #000;
+    box-shadow: 0 0 15px var(--accent-color);
+  }
+
+  .nav-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    background-color: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(15px);
+    border-left: 1px solid var(--accent-color);
+    overflow-x: hidden;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+  }
+
+  .nav-overlay a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    transition: 0.2s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-overlay a:hover {
+    background: rgba(0, 255, 255, 0.1);
+    color: var(--accent-color);
+    padding-left: 40px;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: var(--accent-red);
+    cursor: pointer;
+  }
+
+  /* Sticky Navbar Base */
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100% !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+  }
+
+  nav.sticky.nav-scrolled {
+    background-color: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+  }
+
+  .btn-nav-subscribe {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .btn-nav-subscribe:hover {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px);
+  }
+
+  nav.sticky .language-switcher {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  nav.sticky .menu-trigger {
+    position: static !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+    margin: 0 !important;
+  }
+
+  /* --- ALL MOBILE OVERRIDES STRICTLY PLACED AT THE BOTTOM --- */
+  @media (max-width: 520px) {
+    header {
+      padding: 80px 15px 30px 15px !important;
+    }
+
+    header h1 {
+      font-size: 2rem !important;
+      margin-top: 10px;
+    }
+
+    header h2 { font-size: 1.2rem !important; }
+    header p { font-size: 1rem !important; }
+
+    header .site-logo {
+      left: 12px !important;
+      top: 12px !important;
+    }
+
+    header .site-logo img {
+      height: 48px !important;
+    }
+
+    nav.sticky .nav-container {
+      padding: 0 8px !important;
+      gap: 5px !important;
+      justify-content: flex-end !important;
+    }
+
+    nav.sticky .btn-nav-subscribe {
+      padding: 4px 8px !important;
+      font-size: 0.7rem !important;
+      border-radius: 6px !important;
+      white-space: nowrap !important;
+    }
+
+    nav.sticky .menu-trigger {
+      position: static !important; /* Force static positioning inside sticky nav */
+      padding: 4px 8px !important;
+      font-size: 0.7rem !important;
+      gap: 4px !important;
+      white-space: nowrap !important;
+      width: auto !important;
+    }
+
+    nav.sticky .language-switcher button {
+      width: 24px !important;
+      height: 24px !important;
+      min-width: 24px !important;
+      padding: 0 !important;
+      border: none !important;
+      border-radius: 4px !important;
+      background: transparent !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    nav.sticky .language-switcher img {
+      width: 100 % !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      display: block !important;
+    }
+  }
+
+</style>
+
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,ckb',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+
+function setLanguage(lang) {
+  localStorage.setItem("siteLanguage", lang);
+  
+
+  let count = 0;
+  const checkInterval = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      clearInterval(checkInterval);
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+
+    if (count++ > 50) clearInterval(checkInterval); 
+  }, 100);
+}
+
+
+window.addEventListener("load", function () {
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang && savedLang !== "en") {
+
+    setTimeout(() => setLanguage(savedLang), 1000);
+  }
+});
+</script>
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+<body>
+<nav class="sticky">
+    <div class="nav-container"  style="display: flex; align-items: center; justify-content: flex-end;">
+      
+      
+             
+        <button class="btn-nav-subscribe" id="trigger-form-btn">
+         Subscribe
+        </button>
+
+        <div class="language-switcher">
+          <button onclick="setLanguage('en')">
+            <img src="uk.png">
+          </button>
+          <button onclick="setLanguage('ckb')">
+            <img src="kurdistan.png">
+          </button>
+          <button onclick="setLanguage('ar')">
+            <img src="iraq.png">
+          </button>
+        </div>
+
+        <button class="menu-trigger" onclick="openNav()">
+          MENU <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+      
+    </div>
+  </nav>
+
+<header>
+  <a href="index.html" class="site-logo">
+    <img src="favions.png" alt="YSJOI logo">
+  </a>
+  <h1>YSJOI — Contributors</h1>
+  <p>The students, writers, and mentors who power this journal</p>
+
+
+<div id="myNav" class="nav-overlay">
+  <span class="close-menu" onclick="closeNav()">&times;</span>
+  <a href="index.html" onclick="closeNav()">HOME</a>
+  <a href="issues.html" onclick="closeNav()">ISSUES</a>
+  <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+  <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+  <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+            <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+
+</div>
+
+
+
+</header>
+
+
+<script>
+function openNav() {
+  if (window.innerWidth > 768) {
+    document.getElementById("myNav").style.width = "300px"; 
+  } else {
+    document.getElementById("myNav").style.width = "75%";
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("myNav");
+  if (event.target == modal) {
+    closeNav();
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<div id="google_translate_element" style="display:none;"></div>
+
+
+ 
+<div class="container">
+  <div class="section-title">Core Team</div>
+  <div class="grid">
+
+    <div class="card core">
+      <div class="avatar" translate="no">SMB</div>
+      <div>
+        <h3 translate="no">Satvik M. Bhure</h3>
+        <div class="role">Founder, Editor in Chief, Executive Director</div>
+        <p>Leads editorial direction and oversees all departments.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">AA</div>
+      <div>
+        <h3 translate="no">Ali Ahmed Kayani</h3>
+        <div class="role">Question Sourcing, Articles</div>
+        <p>Finding questions, writing articles.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">AM</div>
+      <div>
+        <h3 translate="no">Ahmed Mohammed</h3>
+        <div class="role">Tech & Systems</div>
+        <p>Coding, article writing, and question coordination.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">PP</div>
+      <div>
+        <h3 translate="no">Parwar Phicri</h3>
+        <div class="role">Article Writing and Advisory</div>
+        <p>Writing articles and helps in YSJOI advisory.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">HS</div>
+      <div>
+        <h3 translate="no">Hasar Salah</h3>
+        <div class="role">Editing Team</div>
+        <p>Editing and checking of research quality.</p>
+      </div>
+    </div>
+
+
+    <div class="card core">
+      <div class="avatar" translate="no">AI</div>
+      <div>
+        <h3 translate="no">Asal Ibrahim</h3>
+        <div class="role">Editing Team</div>
+        <p>Data research and keeping the author's voice while editing.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">SM</div>
+      <div>
+        <h3 translate="no">Syed Minhal</h3>
+        <div class="role">Photography and Miscellaneous</div>
+        <p>Finds views of the world and helps YSJOI in several departments.</p>
+      </div> </div>
+    <div class="card core">
+      <div class="avatar" translate="no">AH</div>
+      <div>
+        <h3 translate="no">Abdullah Haider</h3>
+        <div class="role">Systems and Articles</div>
+        <p>Bringing the latest new to YSJOI, keeping us updated.</p>
+        </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">YM</div>
+      <div>
+        <h3 translate="no">Yousif Muhammed</h3>
+        <div class="role">Youth Outreach, Articles</div>
+        <p>Spreads and brings fresh perspectives to YSJOI.</p>
+      </div>
+    </div>
+    <div class="card core">
+      <div class="avatar" translate="no">RR</div>
+      <div>
+        <h3 translate="no">Reber Rizgar</h3>
+        <div class="role">Article Writing</div>
+        <p>Simplifies the difficult explanations and makes YSJOI more accessible.</p>
+      </div>
+    </div>
+    <div class="card core">
+      <div class="avatar" translate="no">YR</div>
+      <div>
+        <h3 translate="no">Yara Raqib</h3>
+        <div class="role">Question Sourcing</div>
+        <p>Collects and finds the questions on each issue from the youth for our writers.</p>
+      </div>
+    </div>
+    <div class="card core">
+      <div class="avatar" translate="no">AA</div>
+      <div>
+        <h3 translate="no">Ayaan Ahmed</h3>
+        <div class="role">Article Writing</div>
+        <p>Takes the hard science and makes it simple for the students.</p>
+      </div>
+    </div>
+
+    <div class="card core">
+      <div class="avatar" translate="no">ZB</div>
+      <div>
+        <h3 translate="no">Zainab Bader</h3>
+        <div class="role">Article Writing</div>
+        <p>Writes deep dives on the topics everyone wants to learn about!</p>
+      </div>
+    </div>
+    <div class="card core">
+      <div class="avatar" translate="no">SW</div>
+      <div>
+        <h3 translate="no">
+Safa Wisam</h3>
+        <div class="role">Editing Team</div>
+        <p>Ensures the quality of each of our articles with dedicated checking.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section-title">Monthly Questioners</div>
+ <p>The names provided may vary due to privacy concerns.</p>
+  <div class="grid">
+
+    <div class="card questioner">
+      <div class="avatar">OCT 2025</div>
+      <div>
+        <h3>October Questioners</h3>
+        <p translate="no">Maryam · Rozho Michael · Ismail Salah · Zakaria Ahmed · Sorashi B.</p>
+      </div>
+    </div>
+
+    <div class="card questioner">
+      <div class="avatar">NOV 2025</div>
+      <div>
+        <h3>November Questioners</h3>
+        <p translate="no">Reber Rizgar · Ahmed Haitham · Ayaan Ahmed · Ali Ahmed · Parwar Phicri</p>
+      </div>
+    </div>
+
+    <div class="card questioner">
+      <div class="avatar">DEC 2025</div>
+      <div>
+        <h3>December Questioners</h3>
+        <p translate="no">Govar Rizgar · Zheena Fikri · Yousif Abdullah · Arwan Ahmed · Rwar Rebin</p>
+      </div>
+    </div>
+    <div class="card questioner">
+      <div class="avatar"> Jan 2026</div>
+      <div>
+        <h3>January Questioners</h3>
+        <p translate="no">Melina Khalid · Rami Karwan · Alina Parwar · Muhammed Hemin · Ronya Huner</p>
+      </div>
+    </div>
+    <div class="card questioner">
+      <div class="avatar">Feb 2026</div>
+      <div>
+        <h3>February Questioners</h3>
+        <p translate="no">Rozho Michael · Wanya Ali · Ara Danyar · Tiwan Ahmed · Muhammed Raad</p>
+      </div>
+    </div>
+    <div class="card questioner">
+      <div class="avatar">March 2026</div>
+      <div>
+        <h3>March Questioners</h3>
+        <p translate="no">Satvika Satish · Auraka · Kamyar Muhammed · Danyar Mehrad · Noora Abdullah</p>
+      </div>
+    </div>
+
+    <div class="card questioner">
+      <div class="avatar">April 2026</div>
+      <div>
+        <h3>April Questioners</h3>
+        <p translate="no">STAFF EDITION! Safa Wissam · Ali Ahmed Kayani · Parwar Phicri · Yousif Muhammed · Ahmed Muhammed · Abdullah Haider</p>
+      </div>
+    </div>
+
+    <div class="card questioner">
+      <div class="avatar">May 2026</div>
+      <div>
+        <h3>May Questioners</h3>
+        <p translate="no">Dila Mustafa · Novar Mazhar · Daryan Muhammed · Sitalaxmi Narayan · Ahmed Ali</p>
+      </div>
+    </div>
+
+
+    <div class="card questioner">
+      <div class="avatar">June 2026</div>
+      <div>
+        <h3>June Questioners</h3>
+        <p translate="no">Dilshad Rami · Bareq Abdulmajed · Lana Mustafa · Asal Haider · Zain Rozh</p>
+      </div>
+    </div>
+
+
+    <div class="card questioner">
+      <div class="avatar">July 2026</div>
+      <div>
+        <h3>July Questioners</h3>
+        <p translate="no">Hussam Majid · Ibrahim Omar · Arman Kani · Ramyar Abdullah · Koya Rostam
+</p>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+
+  <div class="section-title">Future Contributor</div>
+  <div class="grid">
+
+    <div class="card special">
+      <div class="avatar">YOU</div>
+      <div>
+        <h3>You?</h3>
+        <div class="role">Next YSJOI Contributor</div>
+        <p>Send us an article, experiment, or idea — and see your name here next issue.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+    <div class="footer-column">
+      <h4>General Contact</h4>
+      <p><a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 The Youth Science Journal of Iraq<br>
+    © 2025 Satvik M. Bhure
+  </div>
+</footer>
+
+</body>
+</html>
+
+ 
+

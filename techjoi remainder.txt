@@ -1,0 +1,154 @@
+techjoi remainder
+  <section class="bg-secondary/10 py-24" style="background-color: var(--secondary-10); border-top: 1px solid var(--white-5); border-bottom: 1px solid var(--white-5);">
+    <div class="max-w-7xl px-6">
+      <div class="text-center mb-16">
+        <span class="text-primary text-xs font-bold tracking-widest uppercase block mb-3">Core Tracks</span>
+        <h2 class="text-4xl font-serif">Editorial Columns</h2>
+      </div>
+
+      <div class="grid-3">
+
+        <div class="card-column" data-testid="card-column-0">
+          <div class="card-column-icon">
+            <svg style="width:2rem; height:2rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif mb-4">AI & Data Infrastructures</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed">Tracking technical implementations, localized datasets, data sovereign systems, and advanced computation deployments in local operations.</p>
+        </div>
+
+
+        <div class="card-column" data-testid="card-column-1">
+          <div class="card-column-icon">
+            <svg style="width:2rem; height:2rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Ecosystem Analyses</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed">Deconstructing market gaps, funding constraints, technological bottlenecks, and policy frameworks affecting sustainable scalability.</p>
+        </div>
+
+
+        <div class="card-column" data-testid="card-column-2">
+          <div class="card-column-icon">
+            <svg style="width:2rem; height:2rem;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-serif mb-4">Founders Perspective</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed">Primary source accounts, practical lessons from structural builders, system engineers, and executive tech operators working on local systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="py-28 max-w-7xl px-6">
+    <div class="text-center mb-16">
+      <span class="text-primary text-xs font-bold tracking-widest uppercase block mb-3">Who We Are</span>
+      <h2 class="text-4xl font-serif">Editorial Board</h2>
+      <p class="text-muted-foreground text-sm mt-4 max-w-xl mx-auto">A network of engineers, researchers, and ecosystem builders committed to robust analysis.</p>
+    </div>
+
+    <div class="grid-4">
+
+      <div class="card-team" data-testid="card-team-0">
+        <div class="team-avatar-placeholder">
+          <span class="text-primary font-serif text-xl font-bold">?</span>
+        </div>
+        <span class="text-primary text-xs font-bold tracking-widest uppercase mb-3">Editor-in-Chief</span>
+        <p class="text-muted-foreground text-sm leading-relaxed style-flex-grow" style="flex-grow: 1;">Directs layout architectures and guides thematic focuses for technical content integration.</p>
+        <div class="team-decor-line"></div>
+      </div>
+
+
+
+      <div class="card-team" data-testid="card-team-1">
+        <div class="team-avatar-placeholder">
+          <span class="text-primary font-serif text-xl font-bold">?</span>
+        </div>
+        <span class="text-primary text-xs font-bold tracking-widest uppercase mb-3">Technical Editor</span>
+        <p class="text-muted-foreground text-sm leading-relaxed style-flex-grow" style="flex-grow: 1;">Validates software mechanics, infrastructure profiles, data models, and engineering assertions.</p>
+        <div class="team-decor-line"></div>
+      </div>
+
+
+      <div class="card-team" data-testid="card-team-2">
+        <div class="team-avatar-placeholder">
+          <span class="text-primary font-serif text-xl font-bold">?</span>
+        </div>
+        <span class="text-primary text-xs font-bold tracking-widest uppercase mb-3">Ecosystem Analyst</span>
+        <p class="text-muted-foreground text-sm leading-relaxed style-flex-grow" style="flex-grow: 1;">Evaluates policy implications, investment cycles, and socioeconomic development variables.</p>
+        <div class="team-decor-line"></div>
+      </div>
+
+
+      <div class="card-team" data-testid="card-team-3">
+        <div class="team-avatar-placeholder">
+          <span class="text-primary font-serif text-xl font-bold">?</span>
+        </div>
+        <span class="text-primary text-xs font-bold tracking-widest uppercase mb-3">Research Fellow</span>
+        <p class="text-muted-foreground text-sm leading-relaxed style-flex-grow" style="flex-grow: 1;">Maintains field data collection methods and coordinates peer review networks across regional platforms.</p>
+        <div class="team-decor-line"></div>
+      </div>
+    </div>
+
+    <p class="text-center text-muted-foreground text-sm mt-10">
+      Full board details to be announced in the upcoming structural expansion cycle.
+    </p>
+  </section>
+
+
+  <section class="newsletter-section" style="padding-top: 6rem; padding-bottom: 6rem;">
+    <div class="max-w-4xl px-6 text-center">
+      <div>
+        <span class="text-primary text-xs font-bold tracking-widest uppercase block mb-4">Stay Informed</span>
+        <h2 class="text-4xl font-serif mb-5">Subscribe to the Briefing</h2>
+        <p class="text-muted-foreground text-lg mb-10 font-light max-w-2xl mx-auto leading-relaxed">
+          Receive deeply evaluated technical briefs, structural studies, and data reports directly to your mailbox once per month.
+        </p>
+        <div class="newsletter-form-container">
+          <input type="email" placeholder="Enter your email address" class="newsletter-input" data-testid="input-email-newsletter">
+          <button class="btn-newsletter" data-testid="button-subscribe-newsletter">
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="max-w-7xl px-6 footer-grid">
+      <div class="footer-span-2">
+        <div class="flex-items-center gap-3 mb-5">
+          <span class="font-serif text-2xl font-bold tracking-widest text-primary">TechJOI</span>
+        </div>
+        <p class="text-sm text-muted-foreground max-w-sm leading-relaxed">The Iraqi Journal of Technology & Innovation is an independent entity archiving the continuous modernization pathways of Iraq.</p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-widest uppercase text-foreground">Tracks</h4>
+        <ul>
+          <li><a href="#">AI & Data Systems</a></li>
+          <li><a href="#">Software Engineering</a></li>
+          <li><a href="#">Startup Structures</a></li>
+          <li><a href="#">Regulatory Frameworks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-widest uppercase text-foreground">Archive</h4>
+        <ul>
+          <li><a href="#">Research Briefs</a></li>
+          <li><a href="#">White Papers</a></li>
+          <li><a href="#">Interviews</a></li>
+          <li><a href="#">Data Inventories</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-7xl px-6 footer-bottom">
+      <p class="text-xs text-muted-foreground mb-1">&copy; 2026 TechJOI. All structural parameters reserved.</p>
+      <p class="text-xs text-muted-foreground">Formulated to support the independent engineering and tech ecosystem of Iraq.</p>
+    </div>
+  </footer>

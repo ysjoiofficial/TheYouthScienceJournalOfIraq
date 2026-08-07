@@ -1,0 +1,2097 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta name="robots" content="index, follow">
+<meta name="description" content="The Youth Science Journal of Iraq (YSJOI) — the first Iraqi science journal for the Youth of Iraq, founded by Satvik M. Bhure!">
+<meta name="keywords" content="
+Youth Science Journal of Iraq,
+YSJOI,
+Satvik M. Bhure,
+Satvik Bhure,
+Bhure Satvik,
+Satvik,
+Satvik Bhure,
+Iraqi science journal,
+science journal for students,
+Iraqi youth science,
+STEM Iraq,
+student research Iraq,
+science questions and answers,
+youth-led science journal,
+Iraq STEM education
+">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Youth Science Journal of Iraq</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favions.png" >
+
+<style>
+* {
+    box-sizing: border-box !important;
+}
+
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; 
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+img, video, iframe, div, section, header, footer {
+    max-width: 100% !important;
+}
+
+#visitor-popup, .intro-card, .ask-container {
+    width: 92% !important; 
+    max-width: 350px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.hub-banner-card {
+    width: 92% !important; 
+    max-width: 700px !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: linear-gradient(135deg, #1E1E3F 0%, #0A0A1A 100%);
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: 0.4s ease;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.hub-banner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.2);
+    border-color: var(--accent-color1);
+}
+
+header {
+    width: 100vw !important;
+    left: 0 !important;
+    position: relative;
+    background: url('banner.png') center center / cover no-repeat;
+    text-align: center;
+    padding: 10px 10px;
+    color: #f5f5f5;
+    box-shadow: inset 0 0 100px #000;
+    overflow: hidden;
+    margin-bottom: 0px;
+    margin-top: 0px !important;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.1); 
+    z-index: 0;
+}
+
+header h1, header h2, header p { position: relative; z-index: 1; }
+
+header h1 {
+    font-size: 3.8em;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-purple);
+}
+
+header h2 {
+    font-size: 1.8em;
+    text-shadow: 0 0 5px var(--accent-red), 0 0 10px var(--accent-purple);
+}
+
+header p {
+    font-size: 1.4em;
+    text-shadow: 0 0 2px var(--accent-color), 0 0 8px var(--accent-purple);
+}
+
+header .site-logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;              
+  display: block;
+  text-decoration: none;
+}
+
+header .site-logo img {
+  display: block;
+  height: 175px;            
+  width: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  filter: none;             
+}
+
+.nav-overlay {
+    max-width: 80% !important; 
+    height: 100%;
+    width: 0; 
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0; 
+    background-color: rgba(15, 15, 35, 0.95); 
+    backdrop-filter: blur(15px);
+    border-left: 1px solid var(--accent-color); 
+    overflow-x: hidden;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+}
+
+.nav-overlay a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  display: block;
+  white-space: nowrap; 
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-overlay a:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--accent-color);
+  padding-left: 40px; 
+}
+
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+iframe.skiptranslate,
+.goog-te-gadget {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+:root {
+    --bg-color: #0A0A1A; 
+    --text-color: #FFFFFF;
+    --accent-color: #00FFFF; 
+    --accent-color1: #BF00FF; 
+    --accent-red: #FF0055; 
+    --accent-purple: #9900CC; 
+}
+
+a { text-decoration: none; color: inherit; }
+
+button {
+    cursor: pointer;
+    padding: 10px 22px;
+    background-color: var(--accent-blue, var(--accent-color));
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-red);
+    transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+.meet-team-section {
+    padding: 50px 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    background: transparent;
+}
+
+.meet-team-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.team-intro {
+    max-width: 680px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: #a0aec0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.team-section-box {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+.team-section-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.team-compact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 19px;
+}
+
+.member-horizontal-card {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    padding: 16px;
+    gap: 16px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.member-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.member-info {
+    flex-grow: 1;
+}
+
+.member-info h3 {
+    margin: 0 0 2px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.team-compact-grid > :nth-child(3n+1) .member-info h3 {
+    background: linear-gradient(90deg, #ffe066, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-compact-grid > :nth-child(3n+2) .member-info h3 {
+    background: linear-gradient(90deg, #ffffff, #a6a6a6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.team-compact-grid > :nth-child(3n) .member-info h3 {
+    background: linear-gradient(90deg, #f0a967, #cd7f32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.member-role {
+    font-size: 0.88rem;
+    color: #a0aec0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.member-bio {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .team-compact-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-section-box {
+        padding: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1.1fr;
+  gap: 60px;
+  padding: 40px 5%;
+  align-items: start;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: start;  
+}
+
+.quick-cards {
+  display: grid;
+ align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.mini-card {
+  background: linear-gradient(135deg, rgba(0,255,255,0.07), rgba(153,0,204,0.12));
+  height: auto;
+  padding: 25px 15px;
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-1 {
+  background: linear-gradient(135deg, #00ffff, #0066ff);
+  box-shadow: 0 5px 15px rgba(0,255,255,0.5);
+}
+
+.card-2 {
+  background: linear-gradient(135deg, #ff0055, #ff00aa);
+  box-shadow: 0 5px 15px rgba(255,0,85,0.5);
+}
+
+.card-3 {
+  background: linear-gradient(135deg, #ffd700, #ffae00);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.8);
+}
+
+.mini-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+}
+
+.mini-card i {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.site-footer, footer {
+  background-color: #11101A;
+  color: #CCCCCC;
+  padding: 50px 20px 30px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.footer-column a {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.intro-box {
+  border-radius: 26px;
+  padding: 15px 20px 15px 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.mission-box p,
+.about-box p {
+  font-size: 1.15em;
+}
+
+.mission-box h2 {
+  font-size: 2.1em;
+  color: #ffffff;
+  text-shadow: 0 0 10px var(--accent-purple);
+}
+
+.about-box h2 {
+  font-size: 1.9em;
+  color: var(--accent-color);
+}
+
+.intro-box:hover {
+  transform: translateY(-6px);
+}
+
+.intro-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 25px;
+}
+
+.mission-box {
+  background: linear-gradient(135deg, #25255c, #15152d);
+  border-left: 6px solid var(--accent-purple);
+  border-bottom: 6px solid var(--accent-purple);
+}
+
+.mission-box p {
+  line-height: 1.8;
+  color: #f2f2ff;
+  margin-bottom: 18px;
+}
+
+.about-box {
+  background: #1E1E3F;
+  border-left: 6px solid var(--accent-color);
+  border-bottom: 6px solid var(--accent-color);
+}
+
+.about-box p {
+  line-height: 1.7;
+  color: #e5e5ff;
+  margin-bottom: 18px;
+}
+
+.signature {
+  font-style: italic;
+  margin-top: 30px;
+  opacity: 0.85;
+}
+
+.offshoot-box {
+  background: linear-gradient(135deg, #7A2F22, #D97443, #A5C4D4, #1E293B);
+  border-left: 6px solid var(--accent-purple);
+   text-align: center;
+ border-bottom: 6px solid var(--accent-purple);
+}
+
+.offshoot-box h2 {
+  color: black;
+  font-size: 2.1em;
+}
+
+.offshoot-box p {
+  line-height: 1.8;
+  color: black;
+  margin-bottom: 18px;
+}
+
+.issues {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 50px 20px;
+}
+
+.issue-card {
+    background: #1E1E3F;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.issue-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
+}
+
+.issue-card h3 { margin-bottom: 18px; color: var(--accent-color); }
+.issue-card button { margin: 7px; }
+
+.ask-section {
+  background-color: #1E1E3F;
+  display: flex; 
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.ask-container h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-shadow: 0 0 5px var(--accent-purple);
+}
+
+.ask-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ask-container li {
+  margin-bottom: 15px;
+}
+
+.ask-container a {
+  color: var(--accent-color);
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.ask-container a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+}
+
+.monthly-questions {
+  background-color: #000435;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 60px; 
+}
+
+.monthly-questions h2 {
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+  text-shadow: 0 0 8px var(--accent-purple);
+}
+
+.breaking-news {
+  width: 100%;
+  background: linear-gradient(90deg, #FF0055, #9900CC);
+  padding: 12px 0;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2em;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.breaking-news .label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000;
+  padding: 6px 6px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  text-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+.ticker-wrapper {
+   overflow: hidden;
+  flex: 1;
+}
+
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollTicker 15s linear infinite;
+}
+
+.ticker span {
+  display: inline-block;
+  padding-right: 50px; 
+}
+
+@keyframes scrollTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } 
+}
+
+.team-flash {
+  width: 100%;
+  text-align: center;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #00FFFF, #BF00FF);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1em;
+  box-shadow: 0 0 20px rgba(191,0,255,0.4);
+  position: relative;
+}
+
+.team-flash a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.team-flash a:hover {
+  transform: translateY(-3px);
+}
+
+.team-badge {
+  background: #000;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75em;
+  margin-right: 10px;
+  animation: pulseBadge 2s infinite;
+}
+
+@keyframes pulseBadge {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 15px #fff; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
+
+.question-list {
+  list-style: none;
+  padding: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.qa-unified-container {
+  max-width: 800px;
+  margin: 60px auto;
+  background: linear-gradient(145deg, #0D0D2A, #1B1B3C);
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+.qa-top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.qa-small-box {
+  flex: 1 1 180px;
+  background: linear-gradient(135deg, rgba(0,255,255,0.1), rgba(153,0,204,0.15));
+  padding: 30px 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qa-small-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,255,255,0.4);
+}
+
+.qa-small-box h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-color1);
+}
+
+.qa-small-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qa-small-box li {
+  margin-bottom: 12px;
+}
+
+.qa-small-box a {
+  color: var(--accent-color);
+  font-weight: 600;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.qa-small-box a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+}
+
+.qa-section-title {
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5em;
+  color: var(--accent-color);
+  margin-bottom: 40px;
+  text-shadow: 0 0 12px var(--accent-purple);
+}
+
+.qa-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 25px;
+  justify-content: center; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.qa-question-item {
+  background: linear-gradient(135deg, rgba(0,255,255,0.05), rgba(153,0,204,0.12));
+  border-radius: 16px;
+  padding: 20px 18px;
+  margin: 0px 0px 30px 0px;
+  font-size: 1.2em;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.8s forwards;
+   align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px; 
+}
+
+.qa-question-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,255,255,0.3);
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
+.delay-5 { animation-delay: 1.5s; }
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.language-switcher button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+.language-switcher img {
+  width: 20px;
+  height: 14px;
+}
+
+.hub-link-section {
+    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.hub-icon-box {
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 255, 255, 0.05);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hub-icon-box i {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+.hub-text-content {
+    flex-grow: 1;
+}
+
+.hub-text-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--accent-color);
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+}
+
+.hub-text-content p {
+    font-size: 1.1rem;
+    color: #d7d7ee;
+    margin: 0;
+}
+
+.hub-arrow {
+    font-size: 2rem;
+    color: var(--accent-color1);
+    animation: bounceRight 2s infinite;
+}
+
+@keyframes bounceRight {
+    0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+    40% {transform: translateX(-10px);}
+    60% {transform: translateX(-5px);}
+}
+
+.menu-trigger {
+  position: absolute;
+  top: 65px; 
+  right: 20px;
+  width: 140px; 
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-trigger:hover {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  font-size: 2rem;
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+nav.sticky {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 999; 
+    width: 100% !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    border-bottom: 1px solid transparent;
+}
+
+nav.sticky.nav-scrolled {
+    background-color: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container { 
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+}
+
+.nav-branding {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-purple);
+}
+
+.btn-nav-subscribe {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-nav-subscribe:hover {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px) !important;
+}
+
+nav.sticky .language-switcher {
+    position: static !important;
+    margin-right: 15px;
+}
+
+nav.sticky .menu-trigger {
+    position: static !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+  .qa-top-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .qa-small-box {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 30px 15px !important;
+  }
+  .intro-box {
+    padding: 30px 20px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .quick-cards {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+  .mini-card {
+    width: 100% !important;
+  }
+  .hub-banner-card { flex-direction: column; text-align: center; }
+  .hub-arrow { display: none; }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  header .site-logo {
+    left: 12px;
+    top: 12px;
+  }
+  header .site-logo img {
+    height: 48px;
+  }
+  .menu-trigger {
+    position: absolute !important;
+    top: 50px !important;
+    right: 15px !important;
+    width: auto !important;
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+  }
+  header {
+    padding: 80px 15px 30px 15px !important;
+  }
+  header h1 {
+    font-size: 2rem !important; 
+    margin-top: 10px;
+  }
+  header h2 {
+    font-size: 1.2rem !important;
+  }
+  header p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 521px) {
+    nav.sticky .language-switcher {
+        margin-right: 25px;
+    }
+}
+
+.commendations-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(180deg, #0A0A1A, #140A2A, #0A0A1A); 
+}
+
+.commendations-section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.2em;
+    margin-bottom: 50px;
+    color: var(--accent-color);
+    text-shadow: 0 0 12px var(--accent-purple);
+}
+
+.commendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.commendation-card {
+    background: linear-gradient(135deg, rgba(153,0,204,0.06), rgba(0,255,255,0.12));
+    border: 1px solid rgba(0, 255, 255, 0.15);
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.commendation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 255, 255, 0.2);
+    border-color: var(--accent-color1);
+}
+
+.quote-mark {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--accent-purple);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.commendation-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #d7d7ee;
+    margin-bottom: 25px;
+    z-index: 1;
+}
+
+.commendation-reviewer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.commendation-reviewer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+}
+
+.reviewer-info h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+}
+
+.reviewer-role {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    color: var(--accent-color1);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .commendations-section {
+        padding: 50px 15px; /* Slightly tighter padding to prevent page overflow */
+    }
+    
+    .commendations-section h2 {
+        font-size: 2.0rem; /* Shrinks the massive 3.2em heading on smaller screens */
+        margin-bottom: 30px;
+    } 
+       .commendation-card {
+      width: 650px;
+}
+
+}
+
+
+
+
+
+.sustain-ad-box {
+  background: linear-gradient(135deg, rgba(6, 25, 18, 0.9) 0%, rgba(10, 30, 20, 0.6) 100%);
+  border-left: 6px solid #00FF90;
+  border-bottom: 6px solid #00FF90;
+  border-radius: 26px;
+  padding: 30px 25px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  text-decoration: none;
+  display: block;
+  color: #FFFFFF;
+}
+
+.sustain-ad-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 60px rgba(0, 255, 144, 0.25);
+  border-color: #00E5FF;
+}
+
+.sustain-ad-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.9em;
+  color: #00FF90;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(0, 255, 144, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sustain-ad-box p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #ccd9d3;
+  margin-bottom: 15px;
+}
+
+.sustain-ad-link {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #00FF90;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.sustain-ad-box:hover .sustain-ad-link {
+  color: #00E5FF;
+}
+
+.sustain-ad-link i {
+  transition: transform 0.3s ease;
+}
+
+.sustain-ad-box:hover .sustain-ad-link i {
+  transform: translateX(5px);
+}
+
+
+@media (max-width: 520px) {
+  /* 1. Ensure the sticky navbar elements align correctly and don't wrap */
+  nav.sticky .nav-container {
+    padding: 0 10px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* 2. Scale down the Subscribe Button */
+  nav.sticky .btn-nav-subscribe {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-right: 0px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Scale down the Menu Trigger Button */
+  nav.sticky .menu-trigger {
+    position: static !important; /* Forces consistency across both pages */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Format the Language Switcher container */
+  nav.sticky .language-switcher {
+    position: static !important;
+    display: flex !important;
+    gap: 4px !important;
+    margin-right: 0px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Transform flag buttons into perfect borderless squares */
+  nav.sticky .language-switcher button {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Force flags to perfectly fill the square (no white space) */
+  nav.sticky .language-switcher img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image dynamically without stretching */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important; /* Handled by button parent */
+  }
+}cco
+</style>
+
+
+
+<script>
+window.onload = function () {
+
+  const savedLang = localStorage.getItem("siteLanguage");
+
+  if(savedLang && savedLang !== "en"){
+
+    const interval = setInterval(function(){
+
+      const select = document.querySelector(".goog-te-combo");
+
+      if(select){
+        select.value = savedLang;
+        select.dispatchEvent(new Event("change"));
+        clearInterval(interval);
+      }
+
+    },500);
+
+  }
+
+}
+</script>
+
+
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+
+
+
+
+
+</head>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,ckb',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+
+function setLanguage(lang) {
+  localStorage.setItem("siteLanguage", lang);
+  
+
+  let count = 0;
+  const checkInterval = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      clearInterval(checkInterval);
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+
+    if (count++ > 50) clearInterval(checkInterval); 
+  }, 100);
+}
+
+
+window.addEventListener("load", function () {
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang && savedLang !== "en") {
+
+    setTimeout(() => setLanguage(savedLang), 1000);
+  }
+});
+</script>
+
+
+<body>
+<nav class="sticky">
+    <div class="nav-container"  style="display: flex; align-items: center; justify-content: flex-end;">
+      
+      
+             
+        <button class="btn-nav-subscribe" id="trigger-form-btn">
+          Subscribe
+        </button>
+
+        <div class="language-switcher">
+          <button onclick="setLanguage('en')">
+            <img src="uk.png">
+          </button>
+          <button onclick="setLanguage('ckb')">
+            <img src="kurdistan.png">
+          </button>
+          <button onclick="setLanguage('ar')">
+            <img src="iraq.png">
+          </button>
+        </div>
+
+        <button class="menu-trigger" onclick="openNav()">
+          MENU <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+      
+    </div>
+  </nav>
+
+
+
+
+<header>
+
+  <a href="index.html" class="site-logo" aria-label="YSJOI Home">
+  <img src="favions.png" alt="YSJOI logo" />
+  </a>
+  <h1>The Youth Science Journal of Iraq</h1>
+  <h2>The First Iraqi Science Journal for Iraqi Youth!</h2>
+  <p>Learn the answers to your questions, and teach us what you know!</p>
+  <a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'ETVG1n', true)"></a>
+
+<div id="myNav" class="nav-overlay">
+  <span class="close-menu" onclick="closeNav()">&times;</span>
+  <a href="index.html" onclick="closeNav()">HOME</a>
+  <a href="issues.html" onclick="closeNav()">ISSUES</a>
+  <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+  <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+  <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+              <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+
+
+</div>
+
+</header>
+
+<script>
+function openNav() {
+  if (window.innerWidth > 768) {
+    document.getElementById("myNav").style.width = "300px"; 
+  } else {
+    document.getElementById("myNav").style.width = "75%";
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("myNav");
+  if (event.target == modal) {
+    closeNav();
+  }
+}
+</script>
+
+<div id="google_translate_element" style="display:none;"></div>
+<div class="breaking-news">
+
+  <div class="ticker-wrapper">
+    <div class="ticker">
+      <span>YSJOI Issue #10 is out! The July 2026 Issue is out! &nbsp;&nbsp;&nbsp;</span>
+      <span>YSJOI Issue #10 is out! The July 2026 Issue is out! &nbsp;&nbsp;&nbsp;</span>
+<span>YSJOI Issue #10 is out! The July 2026 Issue is out! &nbsp;&nbsp;&nbsp;</span>
+<span>YSJOI Issue #10 is out! The July 2026 Issue is out! &nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+</div>
+
+<!--
+<div class="team-flash">
+  <a href="techjoi.html">
+    🤯😮 YSJOI Is Growing — <u>See our upcoming offshoot, TechJOI</u>
+  </a>
+</div>
+--!>
+
+
+
+
+<p style="display:none;">
+The Youth Science Journal of Iraq (YSJOI) is an Iraqi youth-led science journal focusing on STEM education and student research.
+</p>
+
+
+    </div>
+
+
+
+
+
+  </div>
+</div>
+
+<script>
+  (function(){
+
+    const popup = document.getElementById('visitor-popup');
+    const closeBtn = document.getElementById('visitor-popup-close');
+
+
+    function showPopup() {
+      requestAnimationFrame(() => {
+        popup.style.transform = 'translateY(0)';
+        popup.style.opacity = '1';
+      });
+    }
+
+
+    function hidePopup() {
+      popup.style.transform = 'translateY(20px)';
+      popup.style.opacity = '0';
+    }
+
+
+    setTimeout(showPopup, 5000);
+
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', hidePopup);
+    }
+
+
+  })();
+</script>
+
+
+<section class="intro-grid">
+
+
+  <div class="intro-box mission-box">
+
+<section class="hub-link-section">
+  <a href="questions.html" class="hub-banner-card">
+    <div class="hub-icon-box">
+      <i class="fas fa-microscope"></i>
+    </div>
+    <div class="hub-text-content">
+      <h2>The Question Hub</h2>
+      <p>A crazy question that won't let you sleep or an answer you have to share with the world? Check out the Question Hub!</p>
+    </div>
+    <div class="hub-arrow">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </a>
+</section>
+
+
+  <h2 class="qa-section-title">July 2026: This Month's Questions</h2>
+
+
+  <ul class="qa-questions-grid">
+    <li class="qa-question-item delay-1"> 🔎 Can we build materials which can repair themselves?</li>
+    <li class="qa-question-item delay-2">🫷 Why can’t humans regenerate limbs?
+</li></ul>
+   <ul class="qa-questions-grid">
+
+    <li class="qa-question-item delay-3">🌌 What happens in Neutron Stars?
+ 
+</li></ul>
+   <ul class="qa-questions-grid">
+    <li class="qa-question-item delay-4">💡 Can we get electricity from trash?
+</li>
+    <li class="qa-question-item delay-5">🌏 Can anybody predict the timing of earthquakes accurately?</li> 
+  </ul>
+  </div>
+
+
+
+
+
+
+  <div class="right-column">
+<a href="sustain.html" class="sustain-ad-box">
+      <h2><i class="fas fa-leaf"></i>The Sustainability Archive</h2>
+      <p>
+        The youth want a part in solving climate change. 
+      </p>
+ <p>
+The Sustainability Archive is where we start. 
+  </p>
+      <div class="sustain-ad-link">
+        Start Now <i class="fas fa-arrow-right"></i>
+      </div>
+    </a>
+
+
+
+  <div class="intro-box about-box">
+    <h2>Our Mission</h2>
+    <p>
+      YSJOI - by the youth, for the youth of Iraq!
+    </p>
+    <p>
+      In the great land that was once Mesopotamia, and the home of the hanging gardens of Babylon, progress in science has slowed.
+    </p>
+    <p><strong>Why?</strong></p>
+    <p>
+      Because the youth of Iraq have no platform to build upon. Opportunities to learn about science, technology, engineering, and mathematics are rare, and students trying to learn about them are even actively discouraged.
+    </p>
+    <p>
+      But instead of surrendering to that silence, we build our own base.
+    </p>
+    <p>
+      And that first step is YSJOI — a place to teach, learn, and explore.
+    </p>
+    <p class="signature">
+      — From the Founding Speech of Satvik M. Bhure
+    </p>
+  </div>
+</div>
+</section>
+
+
+<section class="qa-unified-container">
+
+<section class="commendations-section">
+    <h2>Commendations</h2>
+    
+    <div class="commendations-grid">
+        <div class="commendation-card">
+            <div class="quote-mark">“</div>
+            <p class="commendation-text">
+               What a wonderful and valuable initiative! Inspiring young people is our shared mission.
+            </p>
+            <div class="commendation-reviewer">
+                <img src="ssvi.jpg" alt="Reviewer Photo">
+                <div class="reviewer-info">
+                    <h4>SSVI</h4>
+                    <span class="reviewer-role">Organization</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="commendation-card">
+            <div class="quote-mark">“</div>
+            <p class="commendation-text">
+                Well done! This initiative will help many youths of Iraq learn about the beauty of science!
+            </p>
+            <div class="commendation-reviewer">
+                
+                <div class="reviewer-info">
+                    <h4>Dr. Zainab Fadhil</h4>
+                    <span class="reviewer-role">DPH Board Dentist</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="commendation-card">
+            <div class="quote-mark">“</div>
+            <p class="commendation-text">
+                This idea is great! I hope you all find great success!
+            </p>
+            <div class="commendation-reviewer">
+                
+                <div class="reviewer-info">
+                    <h4>Anonymous Youth</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="meet-the-team" class="meet-team-section">
+
+  <h2>Meet the Team</h2>
+
+  <p class="team-intro">
+    YSJOI is a the product of a team's hardwork, from the founder to every writer.
+  </p>
+
+  <div class="team-section-box">
+    <div class="team-section-title">Founder</div>
+    <div class="team-compact-grid">
+      <div class="member-horizontal-card" style="max-width: 600px !important;;">
+  <!--      <img src="team1.png" alt="Satvik M. Bhure"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Satvik M. Bhure</h3>
+          <div class="member-role">Founder, Editor in Chief and Executive Director</div>
+          <p class="member-bio">
+           Founded YSJOI in 2025 to build from the ground up Iraq's first youth-led science journal. Public relations, Editorial decisions and Website management across all departments.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="team-section-box">
+    <div class="team-section-title">Editorial Team</div>
+    <div class="team-compact-grid">
+      
+
+      <div class="member-horizontal-card">
+   <!--     <img src="team_hasar.jpeg" alt="Hasar Salah"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Hasar Salah</h3>
+          <div class="member-role">Editorial Team</div>
+          <p class="member-bio">Helps polish drafts, keeps the articles factual, and our work immaculate.</p>
+        </div>
+      </div>
+
+      <div class="member-horizontal-card">
+  <!--      <img src="team_asal.jpeg" alt="Asal Ibrahim"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Asal Ibrahim</h3>
+          <div class="member-role">Editorial Team</div>
+          <p class="member-bio">Keeps the articles clear and helps get the message of YSJOI out to the youth.</p>
+        </div>
+      </div>
+
+
+      <div class="member-horizontal-card">
+  <!--      <img src="team_safa.jpeg" alt="Safa Wisam"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Safa Wisam</h3>
+          <div class="member-role">Editorial Team</div>
+          <p class="member-bio">Our data-checker and editor, ensures the quality of all our articles.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="team-section-box">
+    <div class="team-section-title">Writers and Questions</div>
+    <div class="team-compact-grid">
+
+
+<div class="member-horizontal-card">
+       <!--     <img src="team3.jpeg" alt="Parwar Phicri" class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Parwar Phicri</h3>
+          <div class="member-role">Article Writing and Advisory</div>
+          <p class="member-bio">
+            Writes many articles and serves as an advisory to the journal, keeping YSJOI updated.
+          </p>
+        </div>
+      </div>
+
+      <div class="member-horizontal-card">
+       <!--     <img src="team2.jpeg" alt="Ali Ahmed Kayani" class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Ali Ahmed Kayani</h3>
+          <div class="member-role">Article Writing and Question Sourcing</div>
+          <p class="member-bio">
+            Helps find and secure the questions of the youth and turns them into long, researched articles.
+          </p>
+        </div>
+      </div>
+
+
+     <div class="member-horizontal-card">
+    <!--     <img src="team_yara.jpeg" alt="Yara Raqib"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Yara Raqib</h3>
+          <div class="member-role">Question Sourcing</div>
+          <p class="member-bio">The dedicated question source, finding YSJOI's monthly questions for each new issue.</p>
+        </div>
+</div>
+
+
+     <div class="member-horizontal-card">
+    <!--     <img src="team_reber.jpeg" alt="Reber Rizgar"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Reber Rizgar</h3>
+          <div class="member-role">Article Writing</div>
+          <p class="member-bio">Turns the difficult science into accessible articles for YSJOI.</p>
+        </div>
+</div>
+
+     <div class="member-horizontal-card">
+    <!--     <img src="team_reber.jpeg" alt="Reber Rizgar"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Zainab Bader</h3>
+          <div class="member-role">Article Writing</div>
+          <p class="member-bio">Writes deep dives on the topics everyone wants to learn about!</p>
+        </div>
+</div>
+
+     <div class="member-horizontal-card">
+    <!--     <img src="team_reber.jpeg" alt="Reber Rizgar"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Ayaan Ahmed</h3>
+          <div class="member-role">Article Writing</div>
+          <p class="member-bio">Takes the hard science and makes it simple for the students.</p>
+        </div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+  <div class="team-section-box">
+    <div class="team-section-title">Tech and Article Writing</div>
+    <div class="team-compact-grid">
+      
+
+
+
+      <div class="member-horizontal-card">
+       <!-- <img src="team_abdullah.jpeg" alt="Abdullah Haider"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Abdullah Haider</h3>
+          <div class="member-role">Articles and Systems</div>
+          <p class="member-bio">Writes our feature articles of machinery and fact-checks our tech answers.</p>
+        </div>
+      </div>
+
+
+
+      <div class="member-horizontal-card">
+    <!--     <img src="team4.jpeg" alt="Ahmed Mohammed"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Ahmed Mohammed</h3>
+          <div class="member-role">Tech & Articles</div>
+          <p class="member-bio">
+              Helps maintain the YSJOI site and writes deep articles on hypotheticals.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="member-horizontal-card">
+    <!--     <img src="team_yousif.jpeg" alt="Yousif Muhammed"  class="member-avatar"> --!>
+        <div class="member-info">
+          <h3 translate="no">Yousif Muhammed</h3>
+          <div class="member-role">Youth Outreach and Article Writing</div>
+          <p class="member-bio">Helps spread the word about the journal further to the youth while writing with a fresh perspective.</p>
+        </div>
+      </div>
+
+ 
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="credits-and-stats" style="padding:40px 20px; background: linear-gradient(180deg, rgba(10,10,26,0.6), rgba(18,10,36,0.6)); display:flex; flex-wrap:wrap; gap:20px; justify-content:center; align-items:flex-start;">
+
+
+
+  <a href="issues.html" style="text-decoration:none; color:inherit;">
+    <div style="width:320px; max-width:92vw; background:linear-gradient(135deg, rgba(0,255,255,0.06), rgba(153,0,204,0.09)); border:1px solid rgba(255,255,255,0.04); padding:22px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.6); display:flex; gap:16px; align-items:center;">
+      <div style="width:64px;height:64px;border-radius:12px; display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.28); box-shadow: inset 0 0 12px rgba(0,255,255,0.12);">
+        <i class="fas fa-newspaper" style="color:#D4AF37; font-size:24px;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family: 'Orbitron', sans-serif; font-size:1.05rem; color:#D4AF37; margin-bottom:6px;">Issues</div>
+        <div style="font-size:0.95rem; color:#d7d7ee;">Every one of the issues of the Monthly YSJOI published so far!</div>
+      </div>
+    </div>
+  </a>
+
+
+
+
+  <a href="credits.html" style="text-decoration:none; color:inherit;">
+    <div style="width:320px; max-width:92vw; background:linear-gradient(135deg, rgba(153,0,204,0.12), rgba(0,255,255,0.06)); border:1px solid rgba(255,255,255,0.04); padding:22px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.6); display:flex; gap:16px; align-items:center;">
+      <div style="width:64px;height:64px;border-radius:12px; display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.28); box-shadow: inset 0 0 12px rgba(155,0,255,0.12);">
+        <i class="fas fa-copyright" style="color:var(--accent-color1); font-size:24px;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family: 'Orbitron', sans-serif; font-size:1.05rem; color:var(--accent-color1); margin-bottom:6px;">Solved Questions</div>
+        <div style="font-size:0.95rem; color:#d7d7ee;">All the questions we've solved so far! We aim for a variety every month.</div>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="contributors.html" style="text-decoration:none; color:inherit;">
+    <div style="width:320px; max-width:92vw; background:linear-gradient(135deg, rgba(0,255,255,0.06), rgba(153,0,204,0.09)); border:1px solid rgba(255,255,255,0.04); padding:22px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.6); display:flex; gap:16px; align-items:center;">
+      <div style="width:64px;height:64px;border-radius:12px; display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.28); box-shadow: inset 0 0 12px rgba(0,255,255,0.12);">
+        <i class="fas fa-users" style="color:var(--accent-color); font-size:24px;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family: 'Orbitron', sans-serif; font-size:1.05rem; color:var(--accent-color); margin-bottom:6px;">Contributors</div>
+        <div style="font-size:0.95rem; color:#d7d7ee;">Authors, question-askers, helpers and student contributors.</div>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="questions.html" style="text-decoration:none; color:inherit;">
+    <div style="width:320px; max-width:92vw; background:linear-gradient(135deg, rgba(0,255,255,0.06), rgba(153,0,204,0.09)); border:1px solid rgba(255,255,255,0.04); padding:22px; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,0.6); display:flex; gap:16px; align-items:center;">
+      <div style="width:64px;height:64px;border-radius:12px; display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.28); box-shadow: inset 0 0 12px rgba(0,255,255,0.12);">
+        <i class="fas fa-question" style="color:silver; font-size:24px;"></i>
+      </div>
+      <div style="flex:1;">
+        <div style="font-family: 'Orbitron', sans-serif; font-size:1.05rem; color:silver; margin-bottom:6px;">Question Hub</div>
+        <div style="font-size:0.95rem; color:#d7d7ee;">Our contacts for questions - asking and solving!</div>
+      </div>
+    </div>
+  </a>
+
+
+
+
+
+
+
+
+
+</section>
+
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+
+    <div class="footer-column">
+      <h4>General Contact</h4>
+      <p>Email: <a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+    </div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 The Youth Science Journal of Iraq</p>
+    <p>© 2025 Satvik M. Bhure</p>
+  </div>
+
+
+
+</footer>
+</body>
+</html>

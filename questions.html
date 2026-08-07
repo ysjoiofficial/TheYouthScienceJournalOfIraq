@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YSJOI — Questioning Hub</title>
+  <link rel="canonical" href="https://ysjoi.is-great.org/questioning.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favions.png">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body { 
+ top: 0px !important; margin: 0; 
+font-family: 'Poppins', sans-serif; 
+ background: #0A0A1A; 
+ color: #FFFFFF; 
+ 
+overflow-x: hidden; 
+ line-height: 1.6; 
+ -webkit-font-smoothing: antialiased;
+  }
+  
+  html {
+  scroll-behavior: smooth;
+  
+max-width: 100%;
+  overflow-x: hidden;
+ position: relative;
+  }
+
+  :root {
+  --bg: #0A0A1A;
+  --panel: #1E1E3F;
+  
+--text: #FFFFFF;
+  --accent-b: #00FFFF;
+  --accent-p: #BF00FF;
+ 
+ --accent-r: #FF0055;
+  --bg-color: #0A0A1A; 
+  --text-color: #FFFFFF;
+ 
+ --accent-color: #00FFFF; 
+  --accent-color1: #BF00FF;
+  --accent-red: #FF0055; 
+  --accent-purple: #9900CC;
+  --panel-old: #151533;
+  --accent-blue: #00FFFF;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(0, 255, 255, 0.2);
+
+  }
+
+  .goog-te-banner-frame.skiptranslate, 
+ 
+ .goog-te-gadget-icon, 
+  iframe.skiptranslate,
+
+  .goog-te-gadget { 
+ display: none !important; 
+  }
+
+  * {
+ 
+box-sizing: border-box;
+  }
+
+  a {
+ 
+ color: inherit;
+
+  text-decoration: none;
+  }
+
+ 
+ img, .intro-card, .ask-container, .hub-banner-card {
+  max-width: 100% !important;
+  }
+
+  header {
+  position: relative; background: url('banner1.png') center center / cover no-repeat !important;
+  padding: 36px 20px;
+  
+text-align: center;
+  
+box-shadow: inset 0 0 100px #000;
+  
+margin-bottom: 20px;
+  }
+
+  header::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.1);
+  z-index: 0;
+  }
+
+  header h1, header p {
+
+  position: relative;
+  z-index: 1;
+  font-family: 'Orbitron', sans-serif;
+ 
+ }
+
+  header h1
+ {
+  font-size: 3.6rem;
+  
+margin: 0 0 6px;
+  color: var(--accent-p);
+  
+text-shadow: 0 0 4px var(--accent-p);
+  }
+
+  header p {
+  font-size: 1.1rem;
+  
+margin: 0;
+  
+color: #e9e9ff;
+  text-shadow: 0 0 2px var(--accent-b);
+  }
+
+  header .privacy-text {
+  font-size: 0.9rem; 
+  margin: 0;
+  
+color: #e9e9ff;
+  display: block;
+  text-shadow: none;
+  }
+
+  header .site-logo {
+ 
+ position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;      
+ 
+ display: block;
+  text-decoration: none;
+  }
+
+  header .site-logo img {
+  display: block;
+  height: 175px;    
+  width: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  filter: none;     
+  }
+
+  .container {
+  max-width: 1100px;
+  margin: 0 auto; 
+  padding: 40px 20px;
+  }
+
+  .back {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #d7d7ee;
+  margin-bottom: 18px;
+  }
+
+  .page-title {
+  font-family: 'Orbitron', sans-serif;
+  
+color: var(--accent-b);
+           font-size: 1.6rem;
+  margin: 6px 0 18px;
+  }
+
+  .ysjoi .ys { color: #ffffff; }
+  .ysjoi .j { color: #009DA2; }
+  .ysjoi .oi { color: #FD5B46; }
+
+  .submission-grid {
+ display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+  }
+
+  .path-card {
+ background: var(--panel);
+ border: 1px solid;
+ 
+border-color: #B5651D;
+ border-radius: 20px;
+ padding: 40px 30px;
+ 
+text-align: center;
+ transition: all 0.4s ease;
+           display: flex;
+ flex-direction: column;
+ align-items: center;
+ backdrop-filter: blur(10px);
+  }
+
+  .path-card:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 10px 30px rgba(0, 255, 255, 0.15);
+ border-color: var(--accent-purple);
+  }
+
+  .path-card i {
+ font-size: 3rem;
+ margin-bottom: 20px;
+ background: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+  }
+
+  .path-card h3 {
+ font-family: 'Orbitron', sans-serif;
+ font-size: 1.4rem;
+ margin-bottom: 15px;
+  }
+
+  .path-card p {
+ font-size: 0.9rem;
+ color: #ccc;
+ margin-bottom: 25px;
+ flex-grow: 1;
+  }
+
+  .btn {
+ display: inline-block;
+ width: 100%;
+ padding: 12px;
+ border-radius: 10px;
+ font-family: 'Orbitron', sans-serif;
+ font-weight: bold;
+ text-decoration: none;
+ transition: 0.3s;
+ border: 1px solid var(--accent-blue);
+  }
+
+  .btn-google { background: transparent; color: var(--accent-blue); }
+  .btn-google:hover { background: var(--accent-blue); color: #000; }
+
+  .btn-insta { background: transparent; color: var(--accent-purple); border-color: var(--accent-purple); }
+  .btn-insta:hover { background: var(--accent-purple); color: #fff; }
+
+  .btn-email { background: transparent; color: #fff; border-color: #fff; }
+  .btn-email:hover { background: #fff; color: #000; }
+
+  .language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  }
+
+  .language-switcher button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--color-black);
+  }
+
+  .language-switcher img {
+  width: 20px;
+  height: 14px;
+  }
+
+  .menu-trigger {
+  position: absolute;
+  top: 65px; 
+  right: 20px;
+  width: 140px; 
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  }
+
+  
+
+
+nav.sticky {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 999; 
+    width: 100% !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.sticky.nav-scrolled {
+    background-color: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container { 
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+}
+
+.nav-branding {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-purple);
+}
+
+.btn-nav-subscribe {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-nav-subscribe:hover {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px) !important;
+}
+
+nav.sticky .language-switcher {
+    position: static !important;
+    margin-right: 15px;
+}
+
+nav.sticky .menu-trigger {
+    position: static !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+}
+
+
+
+
+
+
+
+.menu-trigger:hover {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-color);
+  }
+
+
+
+.nav-overlay {
+  height: 100%;
+
+  width: 0; 
+position: fixed;
+  z-index: 1000;
+
+ top: 0;
+  right: 0; 
+  background-color: rgba(15, 15, 35, 0.95); 
+  backdrop-filter: blur(15px);
+border-left: 1px solid var(--accent-color);
+  overflow-x: hidden;
+
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+     display: flex;
+  flex-direction: column;
+   padding-top: 80px; 
+}
+
+  .nav-overlay a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  display: block;
+  white-space: nowrap; 
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-overlay a:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--accent-color);
+  padding-left: 40px; 
+  }
+
+  .close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  font-size: 2rem;
+  color: var(--accent-red);
+  cursor: pointer;
+  }
+
+
+
+
+
+
+  #visitor-popup {
+  max-width: 90vw !important; 
+  right: 5vw !important; 
+  left: auto !important;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .site-footer {
+  background-color: #050510;
+  color: #CCCCCC;
+  padding: 50px 20px 30px;
+  margin-top: 60px;
+  border-top: 1px solid #1a1a3a;
+  text-align: center;
+  }
+
+  .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+  }
+
+  .footer-column h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  }
+
+  .footer-column a {
+  color: var(--accent-color);
+  transition: 0.3s;
+  }
+
+  .footer-column a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+  }
+
+  .footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+  header {
+  background: url('mobilebanner.png') center center / cover no-repeat !important;
+  }
+  }
+
+  @media (max-width: 520px) {
+ header .site-logo {
+left: 12px;
+  top: 12px;
+ }
+  header .site-logo img {
+  height: 48px;
+  }
+  .container {
+ padding: 20px;
+}
+  .menu-trigger {
+ 
+ position: absolute !important;
+  top: 50px !important;
+  right: 15px !important;
+  
+width: auto !important;
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ padding: 6px 10px !important;
+  font-size: 0.85rem !important;
+  }
+  header {
+  padding: 80px 15px 30px 15px !important;
+  }
+  header h1 {
+  font-size: 2rem !important; 
+  margin-top: 10px;
+
+  }
+  header h2 {
+  font-size: 1.2rem !important;
+  }
+  header p {
+  font-size: 1rem !important;
+  }
+  }
+
+@media (max-width: 520px) {
+  /* 1. Ensure the sticky navbar elements align correctly and don't wrap */
+  nav.sticky .nav-container {
+    padding: 0 10px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* 2. Scale down the Subscribe Button */
+  nav.sticky .btn-nav-subscribe {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-right: 0px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Scale down the Menu Trigger Button */
+  nav.sticky .menu-trigger {
+    position: static !important; /* Forces consistency across both pages */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Format the Language Switcher container */
+  nav.sticky .language-switcher {
+    position: static !important;
+    display: flex !important;
+    gap: 4px !important;
+    margin-right: 0px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Transform flag buttons into perfect borderless squares */
+  nav.sticky .language-switcher button {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Force flags to perfectly fill the square (no white space) */
+  nav.sticky .language-switcher img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image dynamically without stretching */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important; /* Handled by button parent */
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Ensure the carousel viewport allows the cards to breathe without clipping */
+  .carousel-viewport {
+    padding: 10px 0 !important;
+    overflow: hidden !important;
+  }
+
+  /* 2. Scale down the slide card padding and min-width */
+  .slide-card {
+    min-width: 260px !important; /* Prevents overflow on ultra-narrow screens */
+    padding: 18px !important;    /* Reduced padding to save vertical space */
+    border-radius: 14px !important;
+    gap: 12px !important;
+  }
+
+  /* 3. Make typography more compact */
+  .slide-card h2 {
+    font-size: 1.25rem !important; /* Smaller, sharper headings */
+    margin-bottom: 8px !important;
+    line-height: 1.3 !important;
+  }
+
+  .slide-card p {
+    font-size: 0.85rem !important; /* Compact body text */
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 4. Compact metadata tags and section numbers */
+  .system-meta {
+    margin-bottom: 15px !important;
+  }
+
+  .system-meta .system-tag {
+    font-size: 0.65rem !important;
+    padding: 4px 10px !important;
+  }
+
+  .system-meta .section-num {
+    font-size: 0.75rem !important;
+  }
+
+  /* 5. Shrink the download / access button container */
+  .slide-card .visual-data-deck {
+    padding: 10px !important; /* Half the original padding */
+    border-radius: 8px !important;
+  }
+
+  .slide-card .visual-data-deck a {
+    font-size: 0.75rem !important; /* Smaller text size for PDF links */
+  }
+}
+  </style>
+</head>
+
+
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+  {
+  pageLanguage: 'en',
+  includedLanguages: 'en,ar,ckb',
+  autoDisplay: false
+  },
+  'google_translate_element'
+  );
+}
+
+function setLanguage(lang) {
+  localStorage.setItem("siteLanguage", lang);
+  
+
+  let count = 0;
+  const checkInterval = setInterval(() => {
+  const select = document.querySelector(".goog-te-combo");
+  if (select) {
+  clearInterval(checkInterval);
+  select.value = lang;
+  select.dispatchEvent(new Event("change"));
+  }
+
+  if (count++ > 50) clearInterval(checkInterval); 
+  }, 100);
+}
+
+
+window.addEventListener("load", function () {
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang && savedLang !== "en") {
+
+  setTimeout(() => setLanguage(savedLang), 1000);
+  }
+});
+</script>
+
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+<body>
+<nav class="sticky">
+    <div class="nav-container"  style="display: flex; align-items: center; justify-content: flex-end;">
+      
+      
+             
+        <button class="btn-nav-subscribe" id="trigger-form-btn">
+         Subscribe
+        </button>
+
+        <div class="language-switcher">
+          <button onclick="setLanguage('en')">
+            <img src="uk.png">
+          </button>
+          <button onclick="setLanguage('ckb')">
+            <img src="kurdistan.png">
+          </button>
+          <button onclick="setLanguage('ar')">
+            <img src="iraq.png">
+          </button>
+        </div>
+
+        <button class="menu-trigger" onclick="openNav()">
+          MENU <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+      
+    </div>
+  </nav>
+
+<header>
+  <a href="index.html" class="site-logo">
+  <img src="favions.png" alt="YSJOI logo">
+  </a>
+  <h1>The Question Hub</h1>
+  <p>Ask, and you shall be answered!</p>
+  <p>Answer, and you shall be credited!</p>
+  <p>Learn, and by fate you shall be rewarded!</p>
+  <p class="privacy-text">  YSJOI and all offshoots are committed to your privacy.</p>
+<div id="myNav" class="nav-overlay">
+  <span class="close-menu" onclick="closeNav()">&times;</span>
+  <a href="index.html" onclick="closeNav()">HOME</a>
+  <a href="issues.html" onclick="closeNav()">ISSUES</a>
+  <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+  <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+  <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+            <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+
+</div>
+
+
+</header>
+
+<script>
+function openNav() {
+  if (window.innerWidth > 768) {
+  document.getElementById("myNav").style.width = "300px"; 
+  } else {
+  document.getElementById("myNav").style.width = "75%";
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("myNav");
+  if (event.target == modal) {
+  closeNav();
+  }
+}
+</script>
+<div id="google_translate_element" style="display:none;"></div>
+
+
+<div class="container">
+  <div class="submission-grid">
+  
+
+  <div class="path-card">
+  <i class="fas fa-file-alt"></i>
+  <h3>Official Portal</h3>
+  <p>The standard way to submit full research questions or detailed scientific inquiries for journal peer-review.</p>
+  <a href="https://docs.google.com/forms/d/1aWwFD6FUFgioWU9o9K8loqW0NX56UYJSfG2M6GBMuxs" target="_blank" class="btn btn-google">Open Form</a>
+  </div>
+
+
+  <div class="path-card">
+  <i class="fab fa-instagram"></i>
+  <h3>Quick Inquiries</h3>
+  <p>Have a burning question or a cool scientific photo? Send us a DM and we'll feature it on our feed.</p>
+  <a href="https://instagram.com/ysjoi_official" target="_blank" class="btn btn-insta">Send DM</a>
+  </div>
+
+
+  <div class="path-card">
+  <i class="fas fa-envelope-open-text"></i>
+  <h3>Direct Line</h3>
+  <p>For paper submissions, long-form articles, or if you prefer the classic way. Attachments welcome.</p>
+  <a href="mailto:ysjoiofficial@gmail.com" class="btn btn-email">Send Email</a>
+  </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+
+  <div class="footer-column">
+  <h4>General Contact</h4>
+  <p><a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+  </div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+  © 2025 The Youth Science Journal of Iraq<br>
+  © 2025 Satvik M. Bhure
+  </div>
+</footer>
+
+
+</body>
+</html>

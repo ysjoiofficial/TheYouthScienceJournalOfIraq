@@ -1,0 +1,1424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>YSJOI — Solved Questions</title>
+<link rel="canonical" href="https://ysjoi.is-great.org/credits.html">
+<link rel="icon" type="image/png" sizes="32x32" href="favions.png">
+<style>
+
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+iframe.skiptranslate {
+    display: none !important;
+}
+
+
+body {
+    top: 0px !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+  :root{
+    --bg:#0A0A1A;
+    --panel:#1E1E3F;
+    --text:#FFFFFF;
+    --accent-b:#00FFFF;
+    --accent-p:#BF00FF;
+    --accent-r:#FF0055;
+  }
+
+
+header .site-logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;              
+
+  display: block;
+  text-decoration: none;
+}
+
+header .site-logo img {
+  display: block;
+  height: 175px;            
+  width: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  filter: none;             
+
+}
+
+
+@media (max-width: 520px) {
+  header .site-logo {
+    left: 12px;
+    top: 12px;
+  }
+  header .site-logo img {
+    height: 48px;
+  }
+}
+
+
+    :root {
+        --bg-color: #0A0A1A; 
+
+        --text-color: #FFFFFF;
+        --accent-color: #00FFFF; 
+        --accent-color1: #BF00FF;
+        --accent-red: #FF0055; 
+        --accent-purple: #9900CC;
+    }
+
+
+ .ysjoi .ys {
+  color: #ffffff;
+}
+
+.ysjoi .j {
+  color: #009DA2;
+}
+
+.ysjoi .oi {
+  color: #FD5B46;
+}
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  header{
+    position:relative;
+    background: url('banner.png') center center / cover no-repeat;
+    padding:36px 20px;
+    text-align:center;
+    box-shadow: inset 0 0 100px #000;
+    margin-bottom:20px;
+  }
+  header::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.1);z-index:0}
+  header h1, header p{position:relative;z-index:1;font-family:'Orbitron',sans-serif}
+  header h1{font-size:2.6rem;margin:0 0 6px;color:var(--accent-p);text-shadow:0 0 8px var(--accent-p)}
+  header p{margin:0;color:#e9e9ff;text-shadow:0 0 6px var(--accent-b)}
+  .container{max-width:1100px;margin:0 auto;padding:40px 20px}
+  .back {
+    display:inline-flex;
+    gap:10px;
+    align-items:center;
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.04);
+    padding:10px 14px;
+    border-radius:12px;
+    color:#d7d7ee;
+    margin-bottom:18px;
+  }
+  .page-title{font-family:'Orbitron',sans-serif;color:var(--accent-b);font-size:1.6rem;margin:6px 0 18px}
+
+  .qa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px; display: flex !important; flex-direction: row-reverse; flex-wrap: wrap-reverse; justify-content: flex-end}
+  .qa-card{
+    flex: 1 1 calc(33.333% - 20px); 
+    min-width: 280px;
+    background:var(--panel);
+    border-radius:14px;
+    padding:18px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.45);
+    border:1px solid rgba(255,255,255,0.03);
+  }
+  .qa-card h3{margin:0 0 8px;color:var(--accent-p);font-family:'Orbitron',sans-serif}
+  .meta{font-size:0.9rem;color:#cfcfe8;margin-bottom:10px}
+  .answer{color:#e8e8ff;line-height:1.5;font-size:0.98rem}
+
+  .short{display:block}
+  .full { display:none; margin-top:10px; color:#d6d6ff; }
+  .qa-actions{margin-top:12px;display:flex;gap:10px;align-items:center}
+  .btn-link{
+    padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+    background:transparent;color:#d7d7ee;font-weight:600;font-size:0.9rem;
+  }
+
+
+
+
+
+.site-footer {
+  background-color: #11101A;
+  color: #CCCCCC;
+  padding: 50px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.search-container {
+  background: white;
+  position: relative;
+  max-width: 400px;
+  margin: 20px auto 0;
+  z-index: 1;
+}
+
+#quizSearch {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: 0.3s;
+}
+
+#quizSearch:focus {
+  border-color: var(--accent-b);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-b);
+  opacity: 0.7;
+}
+
+.footer-column h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.footer-column a {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+
+  .featured{
+    background:linear-gradient(135deg, rgba(162,0,255,0.06), rgba(0,191,255,0.03));
+    border:1px solid rgba(255,255,255,0.04);
+    padding:14px;border-radius:12px;margin-bottom:20px;color:#eaf6ff;
+  }
+  footer{padding:36px 20px;text-align:center;background:#0e0e1a;color:#bfbfdc;margin-top:40px}
+
+  @media (max-width:520px){
+    header h1{font-size:1.8rem}
+    .container{padding:20px}
+  }
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.goog-te-banner-frame.skiptranslate {
+display: none !important;
+}
+body {
+top: 0px !important;
+}
+
+.language-switcher button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+color: var(--color-black);
+}
+
+.language-switcher img {
+  width: 20px;
+  height: 14px;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+
+body {
+  top: 0px !important;
+}
+
+
+.goog-te-gadget {
+  display: none !important;
+}
+
+
+
+
+
+
+nav.sticky {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 999; 
+    width: 100% !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.sticky.nav-scrolled {
+    background-color: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container { 
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+}
+
+.nav-branding {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-purple);
+}
+
+.btn-nav-subscribe {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-nav-subscribe:hover {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px) !important;
+}
+
+nav.sticky .language-switcher {
+    position: static !important;
+    margin-right: 15px;
+}
+
+nav.sticky .menu-trigger {
+    position: static !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+}
+
+
+
+
+
+
+
+
+
+
+.menu-trigger {
+  position: absolute;
+  top: 65px; 
+  right: 20px;
+  width: 140px; 
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-trigger:hover {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.nav-overlay {
+  height: 100%;
+  width: 0; 
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0; 
+  background-color: rgba(15, 15, 35, 0.95); 
+  backdrop-filter: blur(15px);
+  border-left: 1px solid var(--accent-color); 
+  overflow-x: hidden;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+   display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.nav-overlay a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  display: block;
+  white-space: nowrap; 
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-overlay a:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--accent-color);
+  padding-left: 40px; 
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  font-size: 2rem;
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .menu-trigger {
+    position: absolute !important;
+    top: 50px !important;
+    right: 15px !important;
+    width: auto !important;
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  header {
+    padding: 80px 15px 30px 15px !important;
+  }
+  
+  header h1 {
+    font-size: 2rem !important; 
+    margin-top: 10px;
+  }
+
+  header h2 {
+    font-size: 1.2rem !important;
+  }
+
+  header p {
+    font-size: 1rem !important;
+  }
+}
+
+
+
+@media (max-width: 520px) {
+  /* 1. Ensure the sticky navbar elements align correctly and don't wrap */
+  nav.sticky .nav-container {
+    padding: 0 10px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* 2. Scale down the Subscribe Button */
+  nav.sticky .btn-nav-subscribe {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-right: 0px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Scale down the Menu Trigger Button */
+  nav.sticky .menu-trigger {
+    position: static !important; /* Forces consistency across both pages */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Format the Language Switcher container */
+  nav.sticky .language-switcher {
+    position: static !important;
+    display: flex !important;
+    gap: 4px !important;
+    margin-right: 0px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Transform flag buttons into perfect borderless squares */
+  nav.sticky .language-switcher button {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Force flags to perfectly fill the square (no white space) */
+  nav.sticky .language-switcher img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image dynamically without stretching */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important; /* Handled by button parent */
+  }
+}
+
+
+
+</style>
+
+
+
+
+</head>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,ckb',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+function setLanguage(lang) {
+  localStorage.setItem("siteLanguage", lang);
+  
+
+  let count = 0;
+  const checkInterval = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      clearInterval(checkInterval);
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+
+    if (count++ > 50) clearInterval(checkInterval); 
+  }, 100);
+}
+
+
+window.addEventListener("load", function () {
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang && savedLang !== "en") {
+
+    setTimeout(() => setLanguage(savedLang), 1000);
+  }
+});
+</script>
+
+
+
+<script>
+function filterQuestions() {
+  let input = document.getElementById('quizSearch').value.toLowerCase();
+  let cards = document.getElementsByClassName('qa-card');
+  let noResults = document.getElementById('noResults');
+  let visibleCount = 0;
+
+  for (let i = 0; i < cards.length; i++) {
+    let cardText = cards[i].innerText.toLowerCase();
+    
+    if (cardText.includes(input)) {
+      cards[i].style.display = ""; 
+      visibleCount++;
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+
+
+  if (visibleCount === 0) {
+    noResults.style.display = "block";
+  } else {
+    noResults.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+
+
+
+<body>
+<nav class="sticky">
+    <div class="nav-container"  style="display: flex; align-items: center; justify-content: flex-end;">
+      
+      
+             
+        <button class="btn-nav-subscribe" id="trigger-form-btn">
+         Subscribe
+        </button>
+
+        <div class="language-switcher">
+          <button onclick="setLanguage('en')">
+            <img src="uk.png">
+          </button>
+          <button onclick="setLanguage('ckb')">
+            <img src="kurdistan.png">
+          </button>
+          <button onclick="setLanguage('ar')">
+            <img src="iraq.png">
+          </button>
+        </div>
+
+        <button class="menu-trigger" onclick="openNav()">
+          MENU <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+      
+    </div>
+  </nav>
+
+
+ <header>
+     <a href="index.html" class="site-logo" aria-label="YSJOI Home">
+  <img src="favions.png" alt="YSJOI logo" />
+  </a>
+  <h1>YSJOI — Solved Questions</h1>
+  <p>All the questions we've solved so far!</p>
+<div class="search-container">
+  <i class="fas fa-search search-icon"></i>
+  <input type="text" id="quizSearch" placeholder="Search questions or issues (e.g. March)..." onkeyup="filterQuestions()">
+</div>
+
+<div id="myNav" class="nav-overlay">
+  <span class="close-menu" onclick="closeNav()">&times;</span>
+  <a href="index.html" onclick="closeNav()">HOME</a>
+  <a href="issues.html" onclick="closeNav()">ISSUES</a>
+  <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+  <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+  <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+             <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+
+</div>
+</header>
+
+
+<script>
+function openNav() {
+  if (window.innerWidth > 768) {
+    document.getElementById("myNav").style.width = "300px"; 
+  } else {
+    document.getElementById("myNav").style.width = "75%";
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("myNav");
+  if (event.target == modal) {
+    closeNav();
+  }
+}
+</script>
+
+<div id="google_translate_element" style="display:none;"></div>
+<div class="container">
+  <a class="back" href="index.html"><i class="fas fa-arrow-left"></i><span style="color:var(--muted)"> Back to home</a>
+
+  <div class="page-title">Each question with its issue!</div>
+<div id="noResults" style="display:none; text-align:center; padding: 40px; color: var(--accent-b); font-family: 'Orbitron', sans-serif;">
+    <i class="fas fa-search-minus" style="font-size: 3rem; display:block; margin-bottom:15px; opacity:0.5;"></i>
+    No matching questions found.
+</div>
+
+  <div class="qa-grid">
+
+
+    <article class="qa-card" id="q1">
+      <h3>Is Cancer Genetic?</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">October 2025 question, Issue 1!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #1</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q2">
+      <h3>If time stops in a black hole, does that mean that the black hole is frozen in time?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">October 2025 question, Issue 1!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #1</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q3">
+      <h3>Can humans change our own genes? Or add new ones?</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">October 2025 question, Issue 1!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #1</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>Why do we live near volcanoes even though they are so dangerous?</h3>
+      <div class="meta">Category: Geology</div>
+      <div class="answer">
+        <div class="short">October 2025 question, Issue 1!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #1</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q5">
+      <h3>How does light pass through glass, which is solid?</h3>
+      <div class="meta">Category: Physics-Chemistry</div>
+      <div class="answer">
+        <div class="short">October 2025 question, Issue 1!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #1</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>What would happen if the Earth stopped spinning?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">November 2025 question, Issue 2!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #2</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>How did the Dinosaurs go extinct?</h3>
+      <div class="meta">Category: Astrophysics+Geology</div>
+      <div class="answer">
+        <div class="short">November 2025 question, Issue 2!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #2</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>Can we edit genes to cure all diseases?</h3>
+      <div class="meta">Category: Biology</div>
+      <div class="answer">
+        <div class="short">November 2025 question, Issue 2!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #2</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>How does the brain work?</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">November 2025 question, Issue 2!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #2</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>How does sacrificial protection from rusting work?</h3>
+      <div class="meta">Category: Particle Physics+Chemistry</div>
+      <div class="answer">
+        <div class="short">November 2025 question, Issue 2!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #2</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>If space is a vacuum, how do things like gravity and light move through it?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">December 2025 question, Issue 3!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #3</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>What is time made of?</h3>
+      <div class="meta">Category: Dimensional Astrophysics</div>
+      <div class="answer">
+        <div class="short">December 2025 question, Issue 3!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #3</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>If evolution is random, how did different species evolve so many similar organs?</h3>
+      <div class="meta">Category: Evolutionary Biology</div>
+      <div class="answer">
+        <div class="short">December 2025 question, Issue 3!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #3</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>If light has no mass how does gravity affect it?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">December 2025 question, Issue 3!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #3</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q4">
+      <h3>Could humans evolve to breathe on Mars?</h3>
+      <div class="meta">Category: Astrophysics+Evolutionary Biology</div>
+      <div class="answer">
+        <div class="short">December 2025 question, Issue 3!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #3</a>
+        </div>
+      </div>
+    </article> 
+
+
+<article class="qa-card" id="q1">
+  <h3>If time can slow down or speed up, can it ever stop completely?</h3>
+  <div class="meta">Category: Physics + Cosmology</div>
+  <div class="answer">
+    <div class="short">
+      January 2026 question, Issue 4!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #4</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q2">
+  <h3>Why does the universe seem to follow math so perfectly?</h3>
+  <div class="meta">Category: Mathematics + Philosophy</div>
+  <div class="answer">
+    <div class="short">January 2026 question, Issue 4!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #4</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q3">
+  <h3>Could there be life that doesn’t use water at all?</h3>
+  <div class="meta">Category: Astrobiology + Chemistry</div>
+  <div class="answer">
+    <div class="short">January 2026 question, Issue 4!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #4</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q4">
+  <h3>If everything is made of particles, what holds reality together at the smallest scale?</h3>
+  <div class="meta">Category: Quantum Physics + Particle Physics</div>
+  <div class="answer">
+    <div class="short">January 2026 question, Issue 4!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #4</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q5">
+  <h3>Why is the speed of light the speed limit of the universe?</h3>
+  <div class="meta">Category: Relativity + Cosmology</div>
+  <div class="answer">
+    <div class="short">January 2026 question, Issue 4!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #4</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="qa-card" id="q5">
+  <h3>What is the future of Fusion Energy on Earth?</h3>
+  <div class="meta">Category: Energy and Sustainability</div>
+  <div class="answer">
+    <div class="short">February 2026 question, Issue 5!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #5</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>What is quantum physics and why is it so different to regular physics?</h3>
+  <div class="meta">Category: Special Relativity</div>
+  <div class="answer">
+    <div class="short">February 2026 question, Issue 5!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #5</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>Who needs the other: The heart or the brain?</h3>
+  <div class="meta">Category: Human Anatomy</div>
+  <div class="answer">
+    <div class="short">February 2026 question, Issue 5!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #5</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>What is the Dark Forest Hypothesis?</h3>
+  <div class="meta">Category: Cosmology and Hypothetical Space</div>
+  <div class="answer">
+    <div class="short">February 2026 question, Issue 5!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #5</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>How do Dyson Spheres work?</h3>
+  <div class="meta">Category: Technology</div>
+  <div class="answer">
+    <div class="short">February 2026 question, Issue 5!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #5</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>Why do we not know what dark matter is?</h3>
+  <div class="meta">Category: Astrophysics</div>
+  <div class="answer">
+    <div class="short">March 2026 question, Issue 6!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #6</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q5">
+  <h3>If bones are four times stronger than concrete, why do they break so easily?</h3>
+  <div class="meta">Category: Human Anatomy</div>
+  <div class="answer">
+    <div class="short">March 2026 question, Issue 6!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #6</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>Why are some non-metals so strange?</h3>
+  <div class="meta">Category: Chemistry</div>
+  <div class="answer">
+    <div class="short">March 2026 question, Issue 6!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #6</a>
+    </div>
+  </div>
+</article>
+<article class="qa-card" id="q5">
+  <h3>What If Your Brain Is Just Predicting Reality Instead of Seeing It?</h3>
+  <div class="meta">Category: Astrophysics</div>
+  <div class="answer">
+    <div class="short">March 2026 question, Issue 6!
+    </div>
+    <div class="qa-actions">
+      <a class="btn-link" href="issues.html">Related: Issue #6</a>
+    </div>
+  </div>
+</article>
+
+<article class="qa-card" id="q1">
+      <h3>What is the best heat conductor?</h3>
+      <div class="meta">Category: Thermodynamics / Materials Science</div>
+      <div class="answer">
+        <div class="short">April 2026 question, Issue 7!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #7</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q2">
+      <h3>What is the universe fated to be?</h3>
+      <div class="meta">Category: Cosmology</div>
+      <div class="answer">
+        <div class="short">April 2026 question, Issue 7!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #7</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q3">
+      <h3>What would happen if the sun disappeared?</h3>
+      <div class="meta">Category: Neuroscience / Perception</div>
+      <div class="answer">
+        <div class="short">April 2026 question, Issue 7!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #7</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q4">
+      <h3>How does the brain dream of things it has never experienced?</h3>
+      <div class="meta">Category: Chemistry / Exotic Matter</div>
+      <div class="answer">
+        <div class="short">April 2026 question, Issue 7!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #7</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>How do black holes work?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">April 2026 question, Issue 7!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #7</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q5">
+      <h3>When did the first humans evolve and how?</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">May 2026 question, Issue 8!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #8</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q5">
+      <h3>What would the universe be in reverse?</h3>
+      <div class="meta">Category: Quantum Physics</div>
+      <div class="answer">
+        <div class="short">May 2026 question, Issue 8!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #8</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>Could we move to other planets?</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">May 2026 question, Issue 8!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #8</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>How could we time travel?</h3>
+      <div class="meta">Category: Relative Physics</div>
+      <div class="answer">
+        <div class="short">May 2026 question, Issue 8!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #8</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>What is one big advancement in human history?</h3>
+      <div class="meta">Category: Achievements</div>
+      <div class="answer">
+        <div class="short">May 2026 question, Issue 8!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #8</a>
+        </div>
+      </div>
+    </article>
+
+
+
+    <article class="qa-card" id="q5">
+      <h3>Are humans designing their own evolution?</h3>
+      <div class="meta">Category: Evolutionary Biology</div>
+      <div class="answer">
+        <div class="short">June 2026 question, Issue 9!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #9</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q5">
+      <h3>Can Light Bend?</h3>
+      <div class="meta">Category: Classical Physics</div>
+      <div class="answer">
+        <div class="short">June 2026 question, Issue 9!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #9</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>Is there a limit to how big a particle can get?</h3>
+      <div class="meta">Category: Theoretical Physics</div>
+      <div class="answer">
+        <div class="short">June 2026 question, Issue 9!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #9</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>Why do we have to sleep?</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">June 2026 question, Issue 9!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #9</a>
+        </div>
+      </div>
+    </article>
+    <article class="qa-card" id="q5">
+      <h3>What are the strangest animals?</h3>
+      <div class="meta">Category: General Knowledge</div>
+      <div class="answer">
+        <div class="short">June 2026 question, Issue 9!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #9</a>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="qa-card" id="q5">
+      <h3> Can we build materials which can repair themselves?
+</h3>
+      <div class="meta">Category: Materials Science</div>
+      <div class="answer">
+        <div class="short">July 2026 question, Issue 10!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #10</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3>
+
+
+Why can’t humans regenerate limbs?
+
+</h3>
+      <div class="meta">Category: Human Biology</div>
+      <div class="answer">
+        <div class="short">July 2026 question, Issue 10!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #10</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3> What happens in Neutron Stars?
+
+</h3>
+      <div class="meta">Category: Astrophysics</div>
+      <div class="answer">
+        <div class="short">July 2026 question, Issue 10!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #10</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3> Can we get electricity from trash?
+
+
+</h3>
+      <div class="meta">Category: Environmental Science</div>
+      <div class="answer">
+        <div class="short">July 2026 question, Issue 10!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #10</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="qa-card" id="q5">
+      <h3> Can anybody predict the timing of earthquakes accurately?</h3>
+      <div class="meta">Category: Geology</div>
+      <div class="answer">
+        <div class="short">July 2026 question, Issue 10!</div>
+        <div class="qa-actions">
+          <a class="btn-link" href="issues.html">Related: Issue #10</a>
+        </div>
+      </div>
+    </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div> 
+
+  </div> 
+
+
+
+<script>
+
+  document.querySelectorAll('.btn-link[data-toggle]').forEach(btn=>{
+    btn.addEventListener('click', e=>{
+      const id = btn.getAttribute('data-toggle');
+      const article = document.getElementById(id);
+      if(!article) return;
+      const full = article.querySelector('.full');
+      const short = article.querySelector('.short');
+      if(!full || !short) return;
+      const isOpen = full.style.display === 'block';
+      if(isOpen){
+        full.style.display = 'none';
+        short.style.display = 'block';
+        btn.textContent = 'Read more';
+      } else {
+        full.style.display = 'block';
+        short.style.display = 'none';
+        btn.textContent = 'Show less';
+      }
+    });
+  });
+
+
+  document.querySelectorAll('.qa-card .full').forEach(f=> f.style.display='none');
+  document.querySelectorAll('.qa-card .short').forEach(s=> s.style.display='block');
+</script>
+
+
+
+</div>
+
+
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+
+    <div class="footer-column">
+      <h4>General Contact</h4>
+      <p>Email: <a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+    </div>
+
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 The Youth Science Journal of Iraq</p>
+    <p>© 2025 Satvik M. Bhure</p>
+  </div>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Sustainability Archive of YSJOI - Ecology research, clean energy solutions, and marsh restoration models.">
+    <meta name="keywords" content="YSJOI, Youth Science Journal of Iraq, Sustainability Archive, Marsh Restoration, Ecology, Green Tech">
+    <title>Sustainability Archive | YSJOI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favions.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        :root {
+            --bg-color: #030806; 
+            --text-color: #E2F5EE;
+            --sustain-green: #00FF90; 
+            --sustain-teal: #00E5FF;
+            --accent-glow: rgba(0, 255, 144, 0.25);
+            --accent-purple: #9900CC; 
+            --accent-red: #FF0055;
+            --panel-bg: rgba(6, 20, 15, 0.75);
+            --border-glow: rgba(0, 255, 144, 0.12);
+            --card-hover-border: rgba(0, 229, 255, 0.4);
+            --muted-color: #a3c2b5;
+        }
+
+        html, body {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-x: hidden !important; 
+            position: relative !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            scroll-behavior: smooth;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(10, 40, 25, 0.6) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(5, 20, 30, 0.5) 0px, transparent 50%);
+        }
+
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        nav.sticky {
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            z-index: 999; 
+            width: 100% !important;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background-color: transparent; 
+            border-bottom: 1px solid transparent;
+            transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+        }
+
+        nav.sticky.nav-scrolled {
+            background-color: rgba(3, 8, 6, 0.95);
+            border-bottom: 1px solid rgba(0, 255, 144, 0.15);
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .nav-container { 
+            width: 100%;
+            max-width: 1400px; 
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex; 
+            justify-content: flex-end; 
+            align-items: center; 
+        }
+
+        .btn-nav-subscribe {
+            background: transparent !important;
+            border: 1px solid var(--sustain-green) !important;
+            color: var(--sustain-green) !important;
+            padding: 8px 20px !important;
+            border-radius: 8px !important;
+            font-size: 0.85rem !important;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-right: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-nav-subscribe:hover {
+            background-color: var(--sustain-green) !important;
+            color: #030806 !important;
+            box-shadow: 0 0 20px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 8px;
+            margin-right: 16px;
+        }
+
+        .language-switcher button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(0, 255, 144, 0.1);
+            background: rgba(0, 255, 144, 0.04);
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border-color: var(--sustain-green);
+        }
+
+        .language-switcher button:hover {
+            background-color: var(--sustain-green) !important;
+            transform: scale(1.05);
+        }
+
+        .language-switcher img {
+            width: 20px;
+            height: 14px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        .menu-trigger {
+            padding: 8px 16px;
+            background: rgba(0, 255, 144, 0.03);
+            border: 1px solid var(--sustain-green);
+            border-radius: 8px;
+            color: var(--sustain-green);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-trigger:hover {
+            background: var(--sustain-green);
+            color: #030806;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .nav-overlay {
+            height: 100%;
+            width: 0;
+            max-width: 80% !important; 
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0; 
+            background-color: rgba(3, 8, 6, 0.98); 
+            backdrop-filter: blur(15px);
+            border-left: 1px solid var(--sustain-green); 
+            overflow-x: hidden;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            padding-top: 80px;
+        }
+
+        .nav-overlay a {
+            padding: 15px 10px;
+            text-decoration: none;
+            font-size: 1.2rem; 
+            font-family: 'Orbitron', sans-serif;
+            color: #fff;
+            display: block;
+            white-space: nowrap; 
+            transition: 0.2s;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .nav-overlay a:hover {
+            background: rgba(0, 255, 144, 0.1);
+            color: var(--sustain-green);
+            padding-left: 40px; 
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            left: 20px; 
+            font-size: 2rem;
+            color: var(--accent-red);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .close-menu:hover {
+            transform: rotate(90deg);
+        }
+
+        header {
+            width: 100vw !important;
+            left: 0 !important;
+            position: relative;
+            background: linear-gradient(180deg, rgba(3, 8, 6, 0.1) 0%, rgba(3, 8, 6, 0.98) 100%), url('banner.png') center center / cover no-repeat;
+            text-align: center;
+            padding: 100px 24px 80px 24px;
+            color: #f5f5f5;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #FFF 30%, var(--sustain-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(0, 255, 144, 0.15));
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-family: 'Space Grotesk', sans-serif;
+            max-width: 750px;
+            margin: 0 auto;
+            color: var(--muted-color);
+            line-height: 1.6;
+        }
+
+        header .site-logo {
+            position: absolute;
+            left: 30px;
+            top: 25px;
+            z-index: 2;             
+            display: block;
+        }
+
+        header .site-logo img {
+            display: block;
+            height: 130px;            
+            width: auto;
+            object-fit: contain;
+        }
+
+        .archive-layout {
+            max-width: 1350px;
+            margin: 40px auto;
+            padding: 0 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .intro-lead-panel {
+            background: linear-gradient(135deg, rgba(6, 25, 18, 0.8) 0%, rgba(3, 8, 6, 0.4) 100%);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-lead-panel::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--sustain-green), var(--sustain-teal));
+        }
+
+        .intro-lead-panel h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+        }
+
+        .intro-lead-panel p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--muted-color);
+            margin: 0;
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 30px;
+        }
+
+        .system-section {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .system-section:hover {
+            border-color: var(--card-hover-border);
+            box-shadow: 0 10px 30px rgba(0, 229, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .system-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .system-tag {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            color: var(--sustain-green);
+            background: rgba(0, 255, 144, 0.08);
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 255, 144, 0.2);
+        }
+
+        .section-num {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.1);
+            font-weight: 700;
+        }
+
+        .system-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .system-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--muted-color);
+            margin-bottom: 25px;
+        }
+
+        .visual-data-deck {
+            background: rgba(3, 8, 6, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            color: #558271;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .terminal-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+        }
+
+        .terminal-row:last-child {
+            border-bottom: none;
+        }
+
+        .label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            color: #ccd9d3;
+        }
+
+        .val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            color: var(--sustain-green);
+        }
+
+        .status-active {
+            color: #00FF66 !important;
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+        }
+
+        .dual-column-spread {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .spread-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 35px;
+            transition: all 0.4s ease;
+        }
+
+        .spread-card:hover {
+            border-color: var(--sustain-teal);
+        }
+
+        .spread-card h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .spread-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--muted-color);
+            margin-bottom: 25px;
+        }
+
+        .progress-track {
+            background: rgba(255, 255, 255, 0.04);
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--sustain-green), var(--sustain-teal));
+        }
+
+        .block-highlight {
+            background: linear-gradient(135deg, rgba(6, 20, 15, 0.9) 0%, rgba(3, 8, 6, 0.98) 100%);
+            border: 1px solid rgba(0, 255, 144, 0.2);
+            border-radius: 20px;
+            padding: 45px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .block-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 144, 0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .block-highlight h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .block-highlight p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--muted-color);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* FIXED CONTRBUTORS GRID (Single item rows) */
+        .tech-specs-display {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .spec-node {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 12px;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .spec-label {
+            display: block;
+            font-size: 0.9rem;
+            color: #6d9382;
+            margin-bottom: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .spec-val {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--sustain-green);
+            line-height: 1.5;
+        }
+
+        .site-footer {
+            background-color: #020504;
+            color: var(--muted-color);
+            padding: 80px 20px 40px;
+            border-top: 1px solid rgba(0, 255, 144, 0.05);
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 40px;
+            max-width: 1300px;
+            margin: 0 auto 50px auto;
+            align-items: center;
+        }
+
+        .footer-column {
+            min-width: 220px;
+        }
+
+        .footer-column h4 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .footer-column p, .footer-column a {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-column a {
+            color: var(--sustain-green);
+            transition: all 0.3s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--sustain-teal);
+            text-shadow: 0 0 8px var(--accent-glow);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 30px;
+            color: #557064;
+        }
+
+        @media (max-width: 1024px) {
+            .asymmetric-grid, .dual-column-spread {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            header h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.3rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            header .site-logo img {
+                height: 90px;
+            }
+            .intro-lead-panel {
+                padding: 25px;
+            }
+            .system-section, .spread-card {
+                padding: 25px 20px;
+            }
+
+        }
+
+        @media (max-width: 520px) {
+            header .site-logo {
+                left: 15px;
+                top: 15px;
+            }
+            header .site-logo img {
+                height: 75px;
+            }
+            header {
+                padding: 120px 15px 40px 15px;
+            }
+            .menu-trigger {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+            .language-switcher {
+                gap: 5px;
+            }
+            .language-switcher button {
+                padding: 6px 8px;
+            }
+        }
+
+        .archive-terminal-window {
+            background: rgba(4, 12, 8, 0.4);
+            border: 1px solid var(--border-glow);
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            position: relative;
+        }
+
+        .terminal-control-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid rgba(0, 255, 144, 0.08);
+            padding-bottom: 20px;
+        }
+.goog-te-banner-frame.skiptranslate, 
+.goog-te-gadget-icon,
+iframe.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+        .terminal-utility-bar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Search Sub-terminal */
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            color: var(--sustain-green);
+            font-size: 0.9rem;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        #archive-search {
+            background: rgba(3, 8, 6, 0.8);
+            border: 1px solid rgba(0, 255, 144, 0.2);
+            border-radius: 10px;
+            padding: 10px 15px 10px 40px;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            width: 280px;
+            transition: all 0.3s ease;
+        }
+
+        #archive-search:focus {
+            outline: none;
+            border-color: var(--sustain-teal);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+            width: 320px;
+        }
+
+        /* Nav Arrows */
+        .carousel-arrows {
+            display: flex;
+            gap: 10px;
+        }
+
+        .arrow-btn {
+            background: rgba(0, 255, 144, 0.04);
+            border: 1px solid rgba(0, 255, 144, 0.2);
+            color: var(--sustain-green);
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .arrow-btn:hover {
+            background: var(--sustain-green);
+            color: #030806;
+            box-shadow: 0 0 15px var(--accent-glow);
+            transform: scale(1.05);
+        }
+
+        .arrow-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Carousel Physics viewport */
+        .carousel-viewport {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 5px 0;
+            cursor: grab;
+        }
+
+        .carousel-viewport:active {
+            cursor: grabbing;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 24px;
+            transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+            width: 100%;
+        }
+
+        /* Cards configuration inside loop */
+        .slide-card {
+            flex: 0 0 calc(33.333% - 16px);
+            min-width: 340px;
+        }
+
+        #no-results-msg {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--muted-color);
+            border: 1px dashed rgba(255,255,255,0.05);
+            border-radius: 14px;
+        }
+
+        @media (max-width: 1100px) {
+            .slide-card { flex: 0 0 calc(50% - 12px); }
+        }
+        @media (max-width: 768px) {
+            .slide-card { flex: 0 0 100%; }
+            #archive-search { width: 100%; }
+            #archive-search:focus { width: 100%; }
+            .terminal-control-header { flex-direction: column; align-items: flex-start; }
+            .terminal-utility-bar { width: 100%; justify-content: space-between; }
+            .search-wrapper { flex-grow: 1; }
+        }
+
+
+@media (max-width: 520px) {
+  /* 1. Ensure the sticky navbar elements align correctly and don't wrap */
+  nav.sticky .nav-container {
+    padding: 0 10px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* 2. Scale down the Subscribe Button */
+  nav.sticky .btn-nav-subscribe {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-right: 0px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Scale down the Menu Trigger Button */
+  nav.sticky .menu-trigger {
+    position: static !important; /* Forces consistency across both pages */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Format the Language Switcher container */
+  nav.sticky .language-switcher {
+    position: static !important;
+    display: flex !important;
+    gap: 4px !important;
+    margin-right: 0px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Transform flag buttons into perfect borderless squares */
+  nav.sticky .language-switcher button {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Force flags to perfectly fill the square (no white space) */
+  nav.sticky .language-switcher img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image dynamically without stretching */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important; /* Handled by button parent */
+  }
+}
+.system-tag {
+  display: inline-block !important;
+  width: fit-content !important;
+  max-width: 80% !important; /* Prevents it from touching the article number */
+  text-align: left !important;
+  line-height: 1.4 !important;
+}
+
+/* Ensure the metadata container doesn't stretch the pill */
+.system-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
+}
+    </style>
+
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1892428');
+    </script>
+</head>
+<body>
+
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <nav class="sticky">
+        <div class="nav-container">
+            <button class="btn-nav-subscribe" id="trigger-form-btn">Subscribe</button>
+
+            <div class="language-switcher">
+                <button onclick="setLanguage('en')">
+                    <img src="uk.png" alt="English">
+                </button>
+                <button onclick="setLanguage('ckb')">
+                    <img src="kurdistan.png" alt="Kurdish">
+                </button>
+                <button onclick="setLanguage('ar')">
+                    <img src="iraq.png" alt="Arabic">
+                </button>
+            </div>
+
+            <button class="menu-trigger" onclick="openNav()">
+                MENU <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header>
+        <a href="index.html" class="site-logo" aria-label="YSJOI Home">
+            <img src="favions.png" alt="YSJOI logo" />
+        </a>
+        <h1>The Sustainability Archive</h1>
+        <p>The youth wants a part in solving climate change. So we herald a beginning.</p>
+    </header>
+
+    <div id="myNav" class="nav-overlay">
+        <span class="close-menu" onclick="closeNav()">&times;</span>
+        <div class="nav-menu-wrapper">
+            <a href="index.html" onclick="closeNav()">HOME</a>
+            <a href="issues.html" onclick="closeNav()">ISSUES</a>
+            <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+            <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+            <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+            <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+        </div>
+    </div>
+
+    <main class="archive-layout">
+        
+        <section class="intro-lead-panel">
+            <h2>Let's Talk About Sustainability and Climate Change.</h2>
+            <p>Not limited to Iraq - this is an international problem. Weather changes, heatwaves, freak hurricanes. None of these follow the pattern of nature today; they are a result, directly, of the actions of humanity. Let's find out a bit more about how so many things - from our lifestyles, to enormous industries - affect the planet everyday. Below is an archive of articles, on sustainability, in a variety of areas; this is an opportunity for youth from everywhere to help spread awareness, and find out more in the process.</p>
+        </section>
+
+        <section class="archive-terminal-window">
+            <div class="terminal-control-header">
+                <div class="terminal-title">
+                    <span class="system-tag">Sustainability Articles</span>
+                    <span class="section-num">The Sustainability Archive</span>
+                </div>
+                
+                <div class="terminal-utility-bar">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="archive-search" placeholder="Find an Article...">
+                    </div>
+                    <div class="carousel-arrows">
+                        <button class="arrow-btn btn-prev" onclick="moveSlide(-1)" aria-label="Previous Log">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="arrow-btn btn-next" onclick="moveSlide(1)" aria-label="Next Log">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-viewport" id="carousel-viewport">
+                <div class="carousel-track" id="carousel-track">
+                    
+                    <div class="system-section slide-card" style="border-color: rgba(0, 255, 144, 0.15);" data-title="sustainability and energy solar thermal grids microgeneration article-05">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--sustain-green); border-color: rgba(0, 255, 144, 0.2); background: rgba(0, 255, 144, 0.05);">ENERGY PRODUCTION</span>
+                                <span class="section-num">ARTICLE-01</span>
+                            </div>
+                            <h2>Sustainability and Energy</h2>
+                            <p>Energy production is a necessity for just about everything we hold dear, from our devices to extremely important healthcare devices. But unsustainable production will only lead to worse production.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(0, 255, 144, 0.03); border: 1px solid rgba(0, 255, 144, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/sustainability-and-energy.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--sustain-green); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(255, 0, 85, 0.15);" data-title="sustainability and endangered species fauna flora extinction risk article-04">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--accent-red); border-color: rgba(255, 0, 85, 0.2); background: rgba(255, 0, 85, 0.05);">SPECIES PROTECTION</span>
+                                <span class="section-num">ARTICLE-02</span>
+                            </div>
+                            <h2>Endangered Species</h2>
+                            <p>There are many incredible creatures on earth. Unfortunately, many of them have been run out of their habitat and their own food, often by humans - and their existence can be key to sustainability.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(255, 0, 85, 0.03); border: 1px solid rgba(255, 0, 85, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/sustainability-and-endangered-species.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--accent-red); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(0, 229, 255, 0.15);" data-title="biodiversity and sustainability ecological balance conservation marshes article-02">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--sustain-teal); border-color: rgba(0, 229, 255, 0.2); background: rgba(0, 229, 255, 0.05);">BIODIVERSITY</span>
+                                <span class="section-num">ARTICLE-03</span>
+                            </div>
+                            <h2>Biodiversity And Sustainability</h2>
+                            <p>Sustainability is key to protecting many things, and of them, the most important could be our biodiversity. Without it, entire ecosystems fail, so the question is: how can we protect biodiversity best?</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(0, 229, 255, 0.03); border: 1px solid rgba(0, 229, 255, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/biodiversity-and-sustainability.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--sustain-teal); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(153, 0, 204, 0.25);" data-title="plastic and sustainability polymer waste microplastics recycling article-03">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: #CC66FF; border-color: rgba(153, 0, 204, 0.3); background: rgba(153, 0, 204, 0.08);">PLASTIC PROBLEMS</span>
+                                <span class="section-num">ARTICLE-04</span>
+                            </div>
+                            <h2>Plastic and Sustainability</h2>
+                            <p>Plastics are revolutionary and extremely important to the world; most things today are made at least in part of them. The problem arises from their invincibility, however. Because plastics are a key root of sustainability issues.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(153, 0, 204, 0.05); border: 1px solid rgba(153, 0, 204, 0.3); text-align: center; padding: 15px;">
+                            <a href="sus/plastic-and-sustainability.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #CC66FF; font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(0, 255, 144, 0.15);" data-title="ai and sustainability neural networks energy optimization climate article-01">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--sustain-green); border-color: rgba(0, 255, 144, 0.2); background: rgba(0, 255, 144, 0.05);">AI SYSTEMS</span>
+                                <span class="section-num">ARTICLE-05</span>
+                            </div>
+                            <h2>AI and Sustainability</h2>
+                            <p>Artificial intelligence optimizes many fields today, from healthcare to transportation to the generation of power itself. However, is the cost of the systems itself worth its benefits?</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(0, 255, 144, 0.03); border: 1px solid rgba(0, 255, 144, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/ai-and-sustainability.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--sustain-green); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+                 
+                    <div class="system-section slide-card" style="border-color: rgba(0, 229, 255, 0.15);" data-title="sustainability in car manufacturing electric vehicles transportation battery cycle article-06">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--sustain-teal); border-color: rgba(0, 229, 255, 0.2); background: rgba(0, 229, 255, 0.05);">VEHICULAR DESIGN</span>
+                                <span class="section-num">ARTICLE-06</span>
+                            </div>
+                            <h2>Sustainability in Cars</h2>
+                            <p>Production and design of cars, as well as their usage, requires a lot of energy, water and resources. It is easy to cross the line into unsustainability.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(0, 229, 255, 0.03); border: 1px solid rgba(0, 229, 255, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/sustainability-in-car-manufacturing.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--sustain-teal); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(153, 0, 204, 0.25);" data-title="sustainability in education curriculum schools teaching ecology article-07">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: #CC66FF; border-color: rgba(153, 0, 204, 0.3); background: rgba(153, 0, 204, 0.08);">EDUCATIONAL WASTE</span>
+                                <span class="section-num">ARTICLE-07</span>
+                            </div>
+                            <h2>Sustainability in Education</h2>
+                            <p>Sustainability is taught, but in teaching sustainability there is a lack of it. The extreme paper usage of educational systems as well as wastage of resources is a large hurdle indeed.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(153, 0, 204, 0.05); border: 1px solid rgba(153, 0, 204, 0.3); text-align: center; padding: 15px;">
+                            <a href="sus/sustainability-in-education.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: #CC66FF; font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(255, 0, 85, 0.15);" data-title="the unsustainability of war environmental damage conflict infrastructure article-08">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--accent-red); border-color: rgba(255, 0, 85, 0.2); background: rgba(255, 0, 85, 0.05);">CONFLICT IMPACT</span>
+                                <span class="section-num">ARTICLE-08</span>
+                            </div>
+                            <h2>The Unsustainability of War</h2>
+                            <p>It is easy to see the quick damages of war, but there are also severe, multi-generational ecological damages caused by conflict, including agricultural land destruction, water resource pollution, and chemical contamination.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(255, 0, 85, 0.03); border: 1px solid rgba(255, 0, 85, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/the-unsustainability-of-war.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--accent-red); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="system-section slide-card" style="border-color: rgba(0, 255, 144, 0.15);" data-title="us and sustainability individual action local impact communities article-09">
+                        <div>
+                            <div class="system-meta">
+                                <span class="system-tag" style="color: var(--sustain-green); border-color: rgba(0, 255, 144, 0.2); background: rgba(0, 255, 144, 0.05);">INDIVIDUAL ACTION</span>
+                                <span class="section-num">ARTICLE-09</span>
+                            </div>
+                            <h2>Us and Sustainability</h2>
+                            <p>How day-to-day choices, small-scale community recycling programs, and smart energy consumption at home, as well as accountability from large industries accumulate to drive major national conservation efforts.</p>
+                        </div>
+                        <div class="visual-data-deck" style="background: rgba(0, 255, 144, 0.03); border: 1px solid rgba(0, 255, 144, 0.2); text-align: center; padding: 15px;">
+                            <a href="sus/us-and-sustainability.pdf" target="_blank" style="display: block; font-family: 'Orbitron', sans-serif; font-size: 0.9rem; color: var(--sustain-green); font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> ACCESS FULL ARTICLE
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div id="no-results-msg">No active logs match your search criteria.</div>
+        </section>
+
+        <div class="dual-column-spread">
+            <section class="spread-card">
+                <h3>Send An Article <i class="fas fa-microscope"></i></h3>
+                <p>If you have an article you think belongs here, find us: <a href="questions.html" style="color: var(--sustain-teal); text-decoration: underline;">The Question Hub.</a> As you can see, all formats are welcome - it is your content and passion we care about, not your font size or indentation.</p>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+            </section>
+
+            <section class="spread-card">
+                <h3>Articles So Far</h3>
+                <p>Please make sure you don't use the same topics as articles already published! So far, we have nine articles across: ENERGY PRODUCTION, SPECIES PROTECTION, BIODIVERSITY, PLASTIC PROBLEMS, AI SYSTEMS, VEHICULAR DESIGN, EDUCATIONAL WASTE, CONFLICT IMPACT, and INDIVIDUAL ACTION.</p>
+                <div class="progress-track">
+                    <div class="progress-fill" style="width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+
+        <section class="block-highlight">
+            <h3>Contributors</h3>
+            <p>All the Contributors to The Sustainability Archive so far!</p>
+            <div class="tech-specs-display">
+                <div class="spec-node">
+                    <span class="spec-label">Founder, Editor in Chief & Executive Director</span>
+                    <span class="spec-val" translate="no">Satvik M. Bhure</span>
+                </div>
+                <div class="spec-node">
+                    <span class="spec-label">Writers</span>
+                    <span class="spec-val" translate="no">Asal Ibrahim, Ali Ahmed, Syed Minhal, Ahmed Mohammed, Yousif Mohammed, Zainab Bader, Abdullah Haider, Reber Rizgar, Rozho Michael</span>
+                </div>
+                <div class="spec-node">
+                    <span class="spec-label">Topic Sourcers</span>
+                    <span class="spec-val" translate="no">Yara Raqib</span>
+                </div>
+                <div class="spec-node">
+                    <span class="spec-label">Editors</span>
+                    <span class="spec-val" translate="no" style="color: #00FF66;">Safa Wisam, Hasar Salah, Ahmed Mohammed</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>General Contact</h4>
+                <p>Email: <a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 The Youth Science Journal of Iraq</p>
+            <p>© 2025 Satvik M. Bhure</p>
+        </div>
+    </footer>
+
+    <script>
+        // Setup function for Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar,ckb',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Action language selector
+        function setLanguage(lang) {
+            localStorage.setItem("siteLanguage", lang);
+            let count = 0;
+            const checkInterval = setInterval(() => {
+                const select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    clearInterval(checkInterval);
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+                if (count++ > 50) clearInterval(checkInterval); 
+            }, 100);
+        }
+
+        window.addEventListener("load", function () {
+            const savedLang = localStorage.getItem("siteLanguage");
+            if (savedLang && savedLang !== "en") {
+                setTimeout(() => setLanguage(savedLang), 1000);
+            }
+        });
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // Overlay Navigation Controls
+        function openNav() {
+            document.getElementById("myNav").style.width = window.innerWidth > 768 ? "400px" : "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0";
+        }
+
+        window.onclick = function(event) {
+            let modal = document.getElementById("myNav");
+            if (event.target == modal) closeNav();
+        }
+
+        // Carousel Controller State
+        let currentIdx = 0;
+        let autoScrollTimer = null;
+        let isSearching = false;
+
+        function initCarousel() {
+            const track = document.getElementById('carousel-track');
+            const viewport = document.getElementById('carousel-viewport');
+            const searchInput = document.getElementById('archive-search');
+
+            if (!track || !viewport || !searchInput) return;
+
+            window.addEventListener('resize', () => updateSliderPosition());
+
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.toLowerCase().trim();
+                const cards = document.querySelectorAll('.slide-card');
+                let counter = 0;
+
+                if (query.length > 0) {
+                    isSearching = true;
+                    stopAutoScroll();
+                    currentIdx = 0;
+                    track.style.transform = `translateX(0px)`;
+                    
+                    cards.forEach(card => {
+                        const targetData = card.getAttribute('data-title') || '';
+                        if (targetData.includes(query)) {
+                            card.style.display = 'flex';
+                            counter++;
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                    
+                    const noResults = document.getElementById('no-results-msg');
+                    if (noResults) noResults.style.display = counter === 0 ? 'block' : 'none';
+                } else {
+                    isSearching = false;
+                    cards.forEach(card => card.style.display = 'flex');
+                    const noResults = document.getElementById('no-results-msg');
+                    if (noResults) noResults.style.display = 'none';
+                    startAutoScroll();
+                }
+            });
+
+            viewport.addEventListener('mouseenter', () => stopAutoScroll());
+            viewport.addEventListener('mouseleave', () => { if(!isSearching) startAutoScroll(); });
+            viewport.addEventListener('touchstart', () => stopAutoScroll(), {passive: true});
+            viewport.addEventListener('touchend', () => { if(!isSearching) startAutoScroll(); }, {passive: true});
+
+            let startX = 0;
+            viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive: true});
+            viewport.addEventListener('touchend', e => {
+                let diffX = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diffX) > 50) moveSlide(diffX > 0 ? 1 : -1);
+            }, {passive: true});
+
+            startAutoScroll();
+        }
+
+        function getVisibleCardsCount() {
+            if (window.innerWidth <= 768) return 1;
+            if (window.innerWidth <= 1100) return 2;
+            return 3;
+        }
+
+        function moveSlide(direction) {
+            if (isSearching) return;
+            const cards = Array.from(document.querySelectorAll('.slide-card'));
+            if (!cards.length) return;
+            
+            const totalVisible = getVisibleCardsCount();
+            const maxIdx = cards.length - totalVisible;
+
+            currentIdx += direction;
+            if (currentIdx > maxIdx) {
+                currentIdx = 0;
+            } else if (currentIdx < 0) {
+                currentIdx = maxIdx;
+            }
+            updateSliderPosition();
+        }
+
+        function updateSliderPosition() {
+            const track = document.getElementById('carousel-track');
+            const cards = document.querySelectorAll('.slide-card');
+            if (!track || !cards.length || isSearching) return;
+
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gapWidth = 24;
+            const offset = currentIdx * (cardWidth + gapWidth);
+            
+            track.style.transform = `translateX(-${offset}px)`;
+        }
+
+        function startAutoScroll() {
+            if (autoScrollTimer) clearInterval(autoScrollTimer);
+            autoScrollTimer = setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+        }
+
+        function stopAutoScroll() {
+            if (autoScrollTimer) clearInterval(autoScrollTimer);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('nav.sticky');
+            const header = document.querySelector('header');
+
+            if (navbar && header) {
+                const headerObserverOptions = {
+                    rootMargin: "-70px 0px 0px 0px",
+                    threshold: 0
+                };
+
+                const headerObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) {
+                            navbar.classList.add('nav-scrolled');
+                        } else {
+                            navbar.classList.remove('nav-scrolled');
+                        }
+                    });
+                }, headerObserverOptions);
+
+                headerObserver.observe(header);
+            }
+
+            const navSubscribeBtn = document.getElementById('trigger-form-btn');
+            if (navSubscribeBtn) {
+                navSubscribeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (typeof ml !== 'undefined') {
+                        ml('show', 'ETVG1n', true);
+                    }
+                });
+            }
+
+            initCarousel();
+        });
+    </script>
+</body>
+</html>

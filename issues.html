@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YSJOI — Issues</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favions.png">
+<link rel="canonical" href="https://ysjoi.is-great.org/issues.html">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+nav.sticky {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    z-index: 999; 
+    width: 100% !important;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+
+nav.sticky.nav-scrolled {
+    background-color: rgba(10, 10, 26, 0.95);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-container { 
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    position: relative;
+}
+
+.nav-branding {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--accent-purple);
+}
+
+.btn-nav-subscribe {
+    background: transparent !important;
+    border: 1px solid var(--accent-color) !important;
+    color: var(--accent-color) !important;
+    padding: 6px 16px !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    transition: 0.3s ease;
+    margin-right: 15px;
+}
+
+.btn-nav-subscribe:hover {
+    background-color: var(--accent-color) !important;
+    color: #000 !important;
+    box-shadow: 0 0 15px var(--accent-color);
+    transform: translateY(-2px) !important;
+}
+
+nav.sticky .language-switcher {
+    position: static !important;
+    margin-right: 15px;
+}
+
+nav.sticky .menu-trigger {
+    position: static !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+}
+
+.goog-te-banner-frame.skiptranslate, 
+
+.goog-te-gadget-icon,
+iframe.skiptranslate {
+    display: none !important;
+}
+
+
+body {
+    top: 0px !important;
+}
+    :root{
+      --bg:#0A0A1A;
+      --panel:#1E1E3F;
+      --muted:#d7d7ee;
+      --accent-a:#00FFFF;  
+      --accent-b:#BF00FF;  
+      --accent-c:#FF0055;  
+      --card-border: rgba(255,255,255,0.04);
+      --glass: rgba(255,255,255,0.03);
+    }
+
+
+    html,body{height:100%;margin:0;background:var(--bg);color:#fff;font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1200px;margin:28px auto;padding:20px}
+
+
+    header.page-header{
+      position:relative;
+      background: url('banner.png') center/cover no-repeat;
+      padding:36px 20px;
+      text-align:center;
+      color:#f5f5f5;
+      box-shadow: inset 0 0 100px #000;
+      border-radius:14px;
+      overflow:hidden;
+    }
+    header.page-header::before{
+      content:"";
+      position:absolute;inset:0;background:rgba(0,0,0,0.1);z-index:0;
+    }
+
+header .site-logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 2;              
+
+  display: block;
+  text-decoration: none;
+}
+
+header .site-logo img {
+  display: block;
+  height: 175px;            
+  width: auto;
+  object-fit: contain;
+  pointer-events: auto;
+  filter: none;             
+
+}
+
+
+@media (max-width: 520px) {
+  header .site-logo {
+    left: 12px;
+    top: 12px;
+  }
+  header .site-logo img {
+    height: 48px;
+  }
+}
+
+
+
+
+    header.page-header h1, header.page-header p { position:relative; z-index:1; margin:0; font-family:'Orbitron',sans-serif; }
+    header.page-header h1{font-size:2.6rem; letter-spacing:0.6px}
+    header.page-header p{font-size:1.05rem; opacity:0.95; margin-top:8px}
+
+
+    .back-link{display:inline-flex;gap:10px;align-items:center;color:var(--muted);margin:18px 0;font-weight:600}
+    .back-link i{color:var(--accent-b)}
+
+
+    .page-title{font-family:'Orbitron',sans-serif;color:var(--accent-b);font-size:1.6rem;margin:16px 0 8px}
+
+
+    .issues-grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap:20px;
+      margin-top:18px;
+      display: flex !important; 
+      flex-direction: row-reverse; 
+      flex-wrap: wrap-reverse; 
+      justify-content: flex-end;
+    }
+
+
+
+
+
+
+.site-footer {
+  background-color: #11101A;
+  color: #CCCCCC;
+  padding: 50px 20px 30px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.footer-column h4 {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.footer-column a {
+  color: var(--accent-color);
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: var(--accent-red);
+  text-shadow: 0 0 8px var(--accent-red);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+
+    .issue-card{
+      display:flex;
+      gap:18px;
+      background: linear-gradient(180deg, rgba(30,30,63,0.9), rgba(22,22,44,0.85));
+      border-radius:14px;
+      padding:16px;
+      align-items:stretch;
+      border:1px solid var(--card-border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transition: transform .18s ease, box-shadow .18s ease;
+          flex: 1 1 calc(33.333% - 20px); 
+    min-width: 280px;
+      
+    }
+    .issue-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.7); }
+
+@media (max-width:640px){
+  .issues-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+    :root {
+        --bg-color: #0A0A1A; 
+        --text-color: #FFFFFF;
+        --accent-color: #00FFFF; 
+        --accent-color1: #BF00FF; 
+        --accent-red: #FF0055; 
+        --accent-purple: #9900CC; 
+    }
+
+
+    .cover {
+      width:140px;
+      min-width:140px;
+      height:190px;
+      border-radius:10px;
+      overflow:hidden;
+      background:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: inset 0 6px 20px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .cover img{ width:100%; height:100%; object-fit:cover; display:block }
+
+
+    .details { flex:1; display:flex; flex-direction:column; justify-content:space-between; padding:4px 2px; }
+    .meta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap }
+    .issue-number { font-family:'Orbitron',sans-serif; font-size:1.15rem; color:var(--accent-a); background:linear-gradient(90deg, rgba(0,255,255,0.06), rgba(191,0,255,0.03)); padding:6px 10px; border-radius:8px; border:1px solid var(--card-border) }
+    .issue-date { color:var(--muted); font-weight:600 }
+    .issue-title { font-size:1.15rem; margin:8px 0; color:#fff; font-weight:600 }
+    .issue-blurb { color:var(--muted); font-size:0.96rem; line-height:1.5; margin-bottom:10px }
+
+
+    .issue-actions{ display:flex; gap:10px; align-items:center; margin-top:6px }
+    .btn{ background:linear-gradient(90deg,var(--accent-a),var(--accent-b)); color:#011; padding:10px 14px; border-radius:10px; border:none; font-weight:700; cursor:pointer; display:inline-flex; gap:8px; align-items:center; text-decoration:none }
+    .btn.secondary{ background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--muted); font-weight:600 }
+    .pill { font-size:0.82rem; padding:6px 8px; border-radius:999px; background:var(--glass); color:var(--muted); border:1px solid rgba(255,255,255,0.03) }
+
+
+    @media (max-width:640px){
+      .issue-card{ flex-direction:column; align-items:stretch }
+      .cover{ width:100%; height:190px; min-width:auto }
+      .issue-actions{ justify-content:flex-start; flex-wrap:wrap }
+    }
+
+
+    .empty { text-align:center; padding:40px 20px; color:var(--muted); background:rgba(255,255,255,0.02); border-radius:12px }
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+body {
+top: 0px !important;
+}
+
+.language-switcher button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+color: var(--color-black); 
+}
+
+.language-switcher img {
+  width: 20px;
+  height: 14px;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+
+body {
+  top: 0px !important;
+}
+
+
+.goog-te-gadget {
+  display: none !important;
+}
+
+
+.menu-trigger {
+  position: absolute;
+  top: 65px; 
+  right: 20px;
+  width: 140px; 
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-color);
+  border-radius: 8px;
+  color: var(--accent-color);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-trigger:hover {
+  background: var(--accent-color);
+  color: #000;
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.nav-overlay {
+  height: 100%;
+  width: 0; 
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0; 
+  background-color: rgba(15, 15, 35, 0.95); 
+  backdrop-filter: blur(15px);
+  border-left: 1px solid var(--accent-color); 
+  overflow-x: hidden;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+   display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+.nav-overlay a {
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 1.2rem; 
+  font-family: 'Orbitron', sans-serif;
+  color: #fff;
+  display: block;
+  white-space: nowrap; 
+  transition: 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-overlay a:hover {
+  background: rgba(0, 255, 255, 0.1);
+  color: var(--accent-color);
+  padding-left: 40px; 
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px; 
+  font-size: 2rem;
+  color: var(--accent-red);
+  cursor: pointer;
+}
+
+@media (max-width: 520px) {
+  .menu-trigger {
+    position: absolute !important;
+    top: 50px !important;
+    right: 15px !important;
+    width: auto !important;
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+  }
+  
+  header {
+    padding: 80px 15px 30px 15px !important;
+  }
+  
+  header h1 {
+    font-size: 2rem !important; 
+    margin-top: 10px;
+  }
+
+  header h2 {
+    font-size: 1.2rem !important;
+  }
+
+  header p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 520px) {
+  /* 1. Ensure the sticky navbar elements align correctly and don't wrap */
+  nav.sticky .nav-container {
+    padding: 0 10px !important;
+    gap: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  /* 2. Scale down the Subscribe Button */
+  nav.sticky .btn-nav-subscribe {
+    padding: 4px 10px !important;
+    font-size: 0.72rem !important;
+    margin-right: 0px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+  }
+
+  /* 3. Scale down the Menu Trigger Button */
+  nav.sticky .menu-trigger {
+    position: static !important; /* Forces consistency across both pages */
+    width: auto !important;
+    padding: 5px 10px !important;
+    font-size: 0.72rem !important;
+    gap: 4px !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Format the Language Switcher container */
+  nav.sticky .language-switcher {
+    position: static !important;
+    display: flex !important;
+    gap: 4px !important;
+    margin-right: 0px !important;
+    padding: 0 !important;
+  }
+
+  /* 5. Transform flag buttons into perfect borderless squares */
+  nav.sticky .language-switcher button {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 6. Force flags to perfectly fill the square (no white space) */
+  nav.sticky .language-switcher img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Crops image dynamically without stretching */
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important; /* Handled by button parent */
+  }
+}
+
+
+  </style>
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,ar,ckb',
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+
+function setLanguage(lang) {
+  localStorage.setItem("siteLanguage", lang);
+  
+
+  let count = 0;
+  const checkInterval = setInterval(() => {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      clearInterval(checkInterval);
+      select.value = lang;
+      select.dispatchEvent(new Event("change"));
+    }
+
+    if (count++ > 50) clearInterval(checkInterval); 
+  }, 100);
+}
+
+
+window.addEventListener("load", function () {
+  const savedLang = localStorage.getItem("siteLanguage");
+  if (savedLang && savedLang !== "en") {
+
+    setTimeout(() => setLanguage(savedLang), 1000);
+  }
+});</script>
+
+
+
+
+
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1892428');
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navSubscribeBtn = document.getElementById('trigger-form-btn');
+    
+    if (navSubscribeBtn) {
+        navSubscribeBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Activates the global MailerLite configuration array hook
+            if (typeof ml !== 'undefined') {
+                ml('show', 'ETVG1n', true);
+            }
+        });
+    }
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('nav.sticky');
+    const header = document.querySelector('header');
+
+    if (navbar && header) {
+        const headerObserverOptions = {
+            rootMargin: "-70px 0px 0px 0px",
+            threshold: 0
+        };
+
+        const headerObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                // If the header is NO LONGER intersecting, add the dark class
+                if (!entry.isIntersecting) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    // If user scrolls back up into the header, make it clear
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }, headerObserverOptions);
+
+        headerObserver.observe(header);
+    }
+});
+</script>
+
+
+
+<body>
+<nav class="sticky">
+    <div class="nav-container"  style="display: flex; align-items: center; justify-content: flex-end;">
+      
+      
+             
+        <button class="btn-nav-subscribe" id="trigger-form-btn">
+         Subscribe
+        </button>
+
+        <div class="language-switcher">
+          <button onclick="setLanguage('en')">
+            <img src="uk.png">
+          </button>
+          <button onclick="setLanguage('ckb')">
+            <img src="kurdistan.png">
+          </button>
+          <button onclick="setLanguage('ar')">
+            <img src="iraq.png">
+          </button>
+        </div>
+
+        <button class="menu-trigger" onclick="openNav()">
+          MENU <i class="fas fa-bars"></i>
+        </button>
+
+      </div>
+      
+    </div>
+  </nav>
+
+
+
+<header class="page-header" role="banner" aria-label="YSJOI header">
+
+  <a class="site-logo" href="index.html" aria-label="YSJOI home">
+    <img src="logo.png" alt="YSJOI logo">
+  </a><p> &nbsp</p>
+      <h1>YSJOI — Issues</h1>
+      <p>Browse every published issue. Click Read Online to open the web version or Download to grab the PDF.</p>
+
+<div id="myNav" class="nav-overlay">
+  <span class="close-menu" onclick="closeNav()">&times;</span>
+  <a href="index.html" onclick="closeNav()">HOME</a>
+  <a href="issues.html" onclick="closeNav()">ISSUES</a>
+  <a href="questions.html" onclick="closeNav()">QUESTION HUB</a>
+  <a href="contributors.html" onclick="closeNav()">CONTRIBUTORS</a>
+  <a href="credits.html" onclick="closeNav()">SOLVED QUESTIONS</a>
+             <a href="sustain.html" onclick="closeNav()">SUSTAINABILITY</a>
+
+</div>
+
+
+</header>
+
+<script>
+function openNav() {
+  if (window.innerWidth > 768) {
+    document.getElementById("myNav").style.width = "300px"; 
+  } else {
+    document.getElementById("myNav").style.width = "75%";
+  }
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("myNav");
+  if (event.target == modal) {
+    closeNav();
+  }
+}
+</script>
+
+<div id="google_translate_element" style="display:none;"></div>
+  <div class="container">
+
+
+    <div class="page-title">All issues</div>
+
+    <div class="issues-grid" role="list">
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue1-title">
+        <div class="cover" aria-hidden="true">
+
+
+          <img src="covers/acover1.jpg" alt="Issue 1 cover — Earth and stars">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #1</div>
+              <div class="pill">Oct 2025</div>
+              <div class="issue-date">Published: Oct 28, 2025</div>
+            </div>
+
+            <div class="issue-title" id="issue1-title">YSJOI Issue #1 — Curious Questions</div>
+
+            <div class="issue-blurb">
+              Our first five big questions from readers answered: black holes, genes, volcanoes, glass, and cancer!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 1.pdf" aria-label="Read Issue 1 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 1.pdf" download="issues/YSJOI 1.pdf" aria-label="Download Issue 1 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover2.png" alt="Issue 2 cover — rockets">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #2</div>
+              <div class="pill">Nov 2025</div>
+              <div class="issue-date">Published: Nov 25, 2025</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #2 — Space & Steel</div>
+
+            <div class="issue-blurb">
+              New questions, a deep-dive into rust protection, and special articles from student contributors.
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 2.pdf" aria-label="Read Issue 2 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 2.pdf" download="issues/YSJOI 2.pdf" aria-label="Download Issue 2 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover3.png" alt="Issue 3 cover — boom">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #3</div>
+              <div class="pill">Dec 2025</div>
+              <div class="issue-date">Published: Dec 31, 2025</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #3 — Mars and Light</div>
+
+            <div class="issue-blurb">
+              Incredible questions, an Astrophysics and Biology special, and fresh faces!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 3.pdf" aria-label="Read Issue 3 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 3.pdf" download="issues/YSJOI 3.pdf" aria-label="Download Issue 3 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover4.png" alt="Issue 3 cover — boom">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #4</div>
+              <div class="pill">Jan 2026</div>
+              <div class="issue-date">Published: Jan 31, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #4 — A New Year Special</div>
+
+            <div class="issue-blurb">
+              A New Year's surprise, questions on Time and Astrobiology!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 4.pdf" aria-label="Read Issue 4 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 4.pdf" download="issues/YSJOI 4.pdf" aria-label="Download Issue 4 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover5.png" alt="Issue 5 cover — boom">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #5</div>
+              <div class="pill">Feb 2026</div>
+              <div class="issue-date">Published: Feb 28, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #5 — New Staff, New Stuff!</div>
+
+            <div class="issue-blurb">
+              A new staff brings new styles to YSJOI!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 5.pdf" aria-label="Read Issue 5 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 5.pdf" download="issues/YSJOI 5.pdf" aria-label="Download Issue 5 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover6.png" alt="Issue 6 cover — rockets">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #6</div>
+              <div class="pill">March 2026</div>
+              <div class="issue-date">Published: March 31, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #6 — Planes and Space</div>
+
+            <div class="issue-blurb">
+              The ever-growing staff of YSJOI brings a new, fresh 5 articles and fresh new faces!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 6.pdf" aria-label="Read Issue 6 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 6.pdf" download="issues/YSJOI 6.pdf" aria-label="Download Issue 6 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover7.png" alt="Issue 7 cover — rockets">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #7</div>
+              <div class="pill">April 2026</div>
+              <div class="issue-date">Published: April 30, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #7 — Staff and April Fools!</div>
+
+            <div class="issue-blurb">
+              A staff edition combined with an april fools edition - can you complete the challenge?
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 7.pdf" aria-label="Read Issue 7 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 7.pdf" download="issues/YSJOI 7.pdf" aria-label="Download Issue 7 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover8.png" alt="Issue 8 cover">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #8</div>
+              <div class="pill">May 2026</div>
+              <div class="issue-date">Published: May 29, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #8 — First Photo Feature!</div>
+
+            <div class="issue-blurb">
+              Our first photo feature, the answer to last month's challenge, and 5 brand new articles!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 8.pdf" aria-label="Read Issue 8 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 8.pdf" download="issues/YSJOI 8.pdf" aria-label="Download Issue 8 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover9.png" alt="Issue 9 cover">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #9</div>
+              <div class="pill">June 2026</div>
+              <div class="issue-date">Published: June 30, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #9!</div>
+
+            <div class="issue-blurb">
+              Five new articles from the YSJOI team, rejuvenated by the summer!
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/ysjoi 9.pdf" aria-label="Read Issue 9 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/ysjoi 9.pdf" download="issues/ysjoi 9.pdf" aria-label="Download Issue 9 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/acover10.png" alt="Issue 9 cover">
+        </div>
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #10</div>
+              <div class="pill">July 2026</div>
+              <div class="issue-date">Published: July 29, 2026</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #10 - Breaking and Building!</div>
+Articles delving into the mechanisms of breaking and repairing across fields - from humans to stars!
+            <div class="issue-blurb">
+              
+            </div>
+          </div>
+
+          <div class="issue-actions" aria-hidden="false">
+            <a class="btn" href="issues/YSJOI 10.pdf" aria-label="Read Issue 9 online"><i class="fas fa-book-open"></i> Read Online</a>
+            <a class="btn secondary" href="issues/YSJOI 10.pdf" download="issues/YSJOI 10.pdf" aria-label="Download Issue 9 PDF"><i class="fas fa-file-download"></i> Download PDF</a>
+          </div>
+        </div>
+      </article>
+
+
+
+
+      <article class="issue-card" role="listitem" aria-labelledby="issue2-title">
+        <div class="cover">
+          <img src="covers/mystery_cover.png" alt="Issue cover — rockets">
+        </div>
+
+
+        <div class="details">
+          <div>
+            <div class="meta-row">
+              <div class="issue-number">Issue #11</div>
+              <div class="pill">COMING SOON</div>
+              <div class="issue-date">COMING SOON</div>
+            </div>
+
+            <div class="issue-title" id="issue2-title">YSJOI Issue #11 — SECRETS!</div>
+
+            <div class="issue-blurb">
+             Coming soon!
+            </div>
+          </div>
+
+          <div class="issue-actions">
+            <a class="btn" href="#"><i class="fas fa-book-open"></i> COMING SOON</a>
+            <a class="btn secondary" href="#"><i class="fas fa-file-download"></i>COMING SOON</a>
+          </div>
+        </div>
+      </article>
+
+
+
+    </div>
+  </div>
+
+
+<footer class="site-footer">
+
+  <div class="footer-container">
+
+
+
+    <div class="footer-column">
+      <h4>General Contact</h4>
+      <p>Email: <a href="mailto:ysjoiofficial@gmail.com">YSJOIofficial@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 The Youth Science Journal of Iraq</p>
+    <p>© 2025 Satvik M. Bhure</p>
+  </div>
+
+</footer>
+</body>
+</html>
